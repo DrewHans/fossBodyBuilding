@@ -117,3 +117,6 @@ www/
 
 # NPM junk
 package-lock.json
+
+# VSCode junk
+.vscode
