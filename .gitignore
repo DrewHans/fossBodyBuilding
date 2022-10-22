@@ -115,3 +115,5 @@ cordova/www/
 # Production build files
 www/
 
+# NPM junk
+package-lock.json
