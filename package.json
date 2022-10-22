@@ -1,0 +1,43 @@
+{
+  "name": "io.drewhans.fossbodybuilding",
+  "displayName": "fossBodyBuilding",
+  "private": true,
+  "version": "1.0.0",
+  "description": "fossBodyBuilding is a libre workout tracker app for Android.",
+  "author": "Drew Hans (https://drewhans.github.io/)",
+  "repository": "https://github.com/DrewHans/fossBodyBuilding",
+  "license": "GPLV3",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "cross-env NODE_ENV=development vite",
+    "build": "cross-env NODE_ENV=production vite build",
+    "build-cordova": "cross-env TARGET=cordova cross-env NODE_ENV=production vite build && node ./build/build-cordova.js && cd cordova && cordova build",
+    "cordova-requirements": "cd cordova && cordova requirements",
+    "emulator": "cd cordova && cordova run --emulator",
+    "postinstall": "cpy --flat ./node_modules/framework7-icons/fonts/*.* ./src/fonts/ && cpy --flat ./node_modules/material-icons/iconfont/*.* ./src/fonts/"
+  },
+  "browserslist": [
+    "IOS >= 13",
+    "Safari >= 13",
+    "last 5 Chrome versions",
+    "last 5 Firefox versions",
+    "Samsung >= 12"
+  ],
+  "dependencies": {
+    "dom7": "^4.0.4",
+    "framework7": "^7.0.8",
+    "framework7-icons": "^5.0.5",
+    "material-icons": "^1.12.0",
+    "skeleton-elements": "^4.0.1",
+    "swiper": "^8.4.4"
+  },
+  "devDependencies": {
+    "cpy-cli": "^4.2.0",
+    "cross-env": "^7.0.3",
+    "postcss-preset-env": "^7.8.2",
+    "rollup": "^3.2.3",
+    "rollup-plugin-framework7": "^1.2.1",
+    "vite": "^3.1.8",
+    "vite-plugin-html": "^3.2.0"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "cwd": "/home/nyancat/Code/fossBodybuilding",
+  "type": [
+    "cordova"
+  ],
+  "name": "fossBodyBuilding",
+  "framework": "core",
+  "template": "split-view",
+  "bundler": "vite",
+  "cssPreProcessor": false,
+  "theming": {
+    "customColor": false,
+    "color": "#007aff",
+    "darkTheme": true,
+    "iconFonts": true,
+    "fillBars": true
+  },
+  "customBuild": false,
+  "pkg": "io.drewhans.fossBodyBuilding",
+  "cordova": {
+    "folder": "cordova",
+    "platforms": [
+      "android"
+    ],
+    "plugins": [
+      "cordova-plugin-statusbar",
+      "cordova-plugin-keyboard",
+      "cordova-plugin-splashscreen"
+    ]
+  }
+}
