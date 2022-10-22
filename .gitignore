@@ -102,3 +102,16 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Misc
+.DS_Store
+Thumbs.db
+
+# Cordova build files
+cordova/platforms/
+cordova/plugins/
+cordova/www/
+
+# Production build files
+www/
+
