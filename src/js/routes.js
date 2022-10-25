@@ -1,42 +1,63 @@
+import AboutPage from "../pages/about.f7";
+import CardioLibraryPage from "../pages/cardio-library.f7";
+import HomePage from "../pages/home.f7";
+import LiftingLibraryPage from "../pages/lifting-library.f7";
+import SavedWorkoutsPage from "../pages/saved-workouts.f7";
+import SettingsPage from "../pages/settings.f7";
+import StatisticsPage from "../pages/statistics.f7";
 
-import HomePage from '../pages/home.f7';
-import AboutPage from '../pages/about.f7';
-import FormPage from '../pages/form.f7';
-
-import LeftPage1 from '../pages/left-page-1.f7';
-import LeftPage2 from '../pages/left-page-2.f7';
-import DynamicRoutePage from '../pages/dynamic-route.f7';
-import RequestAndLoad from '../pages/request-and-load.f7';
-import NotFoundPage from '../pages/404.f7';
+import FormPage from "../pages/form.f7";
+import DynamicRoutePage from "../pages/dynamic-route.f7";
+import RequestAndLoad from "../pages/request-and-load.f7";
+import NotFoundPage from "../pages/404.f7";
 
 var routes = [
   {
-    path: '/',
+    path: "/",
     component: HomePage,
   },
+
   {
-    path: '/about/',
+    path: "/about/",
     component: AboutPage,
   },
+
   {
-    path: '/form/',
+    path: "/cardiolibrary/",
+    component: CardioLibraryPage,
+  },
+
+  {
+    path: "/liftinglibrary/",
+    component: LiftingLibraryPage,
+  },
+
+  {
+    path: "/savedworkouts/",
+    component: SavedWorkoutsPage,
+  },
+
+  {
+    path: "/settings/",
+    component: SettingsPage,
+  },
+
+  {
+    path: "/statistics/",
+    component: StatisticsPage,
+  },
+
+  {
+    path: "/form/",
     component: FormPage,
   },
 
   {
-    path: '/left-page-1/',
-    component: LeftPage1,
-  },
-  {
-    path: '/left-page-2/',
-    component: LeftPage2,
-  },
-  {
-    path: '/dynamic-route/blog/:blogId/post/:postId/',
+    path: "/dynamic-route/blog/:blogId/post/:postId/",
     component: DynamicRoutePage,
   },
   {
-    path: '/request-and-load/user/:userId/',
+    path: "/request-and-load/user/:userId/",
     async: function ({ router, to, resolve }) {
       // App instance
       var app = router.app;
@@ -51,19 +72,19 @@ var routes = [
       setTimeout(function () {
         // We got user data from request
         var user = {
-          firstName: 'Vladimir',
-          lastName: 'Kharlampidi',
-          about: 'Hello, i am creator of Framework7! Hope you like it!',
+          firstName: "Vladimir",
+          lastName: "Kharlampidi",
+          about: "Hello, i am creator of Framework7! Hope you like it!",
           links: [
             {
-              title: 'Framework7 Website',
-              url: 'http://framework7.io',
+              title: "Framework7 Website",
+              url: "http://framework7.io",
             },
             {
-              title: 'Framework7 Forum',
-              url: 'http://forum.framework7.io',
+              title: "Framework7 Forum",
+              url: "http://forum.framework7.io",
             },
-          ]
+          ],
         };
         // Hide Preloader
         app.preloader.hide();
@@ -76,14 +97,14 @@ var routes = [
           {
             props: {
               user: user,
-            }
+            },
           }
         );
       }, 1000);
     },
   },
   {
-    path: '(.*)',
+    path: "(.*)",
     component: NotFoundPage,
   },
 ];

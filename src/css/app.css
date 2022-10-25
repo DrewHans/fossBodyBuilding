@@ -81,3 +81,9 @@
   content: '';
   z-index: 6000;
 }
+
+/* overrides */
+.panel-close.item-content.item-link,
+.panel-close.item-content.item-link .item-inner .item-title {
+  color: white
+}

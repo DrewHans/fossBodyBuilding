@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="about">
+  <div class="page" data-name="saved-workouts">
     <!-- Top Navbar -->
     <div class="navbar navbar-large">
       <div class="navbar-bg"></div>
@@ -11,14 +11,14 @@
           </a>
         </div>
         <div class="title-large">
-          <div class="title-large-text">About</div>
+          <div class="title-large-text">Saved Workouts</div>
         </div>
       </div>
     </div>
 
     <!-- Scrollable page content-->
     <div class="page-content">
-      <div class="block-title">About My App</div>
+      <div class="block-title">Saved Workouts Page !</div>
       <div class="block block-strong">
         <p>
           Fugiat perspiciatis excepturi, soluta quod non ullam deleniti. Nobis
