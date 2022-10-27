@@ -12,18 +12,17 @@ var dbAdapter = {
       const openDBRequest = indexedDB.open(databaseName, databaseVersion);
 
       openDBRequest.onerror = (e) => {
-        console.log("Error: database failed to open", e);
-        reject(); // may need to remove this
+        reject(e.target.result); // may need to remove this
       };
 
       openDBRequest.onsuccess = (e) => {
-        DB = openDBRequest.result;
-        resolve();
+        dbAdapter.DB = openDBRequest.result;
+        resolve("DB succcessfully initialized");
       };
 
       // called when version number changed or when a new database created
       openDBRequest.onupgradeneeded = (e) => {
-        DB = e.target.result;
+        dbAdapter.DB = e.target.result;
         let upgradeTransaction = e.target.transaction;
         let objectStore;
 
@@ -32,11 +31,8 @@ var dbAdapter = {
           let objectStore;
 
           // create / upgrade the objectStore
-          if (!DB.objectStoreNames.contains(objectStoreName)) {
-            objectStore = DB.createObjectStore(objectStoreName, {
-              keyPath: "id",
-              autoIncrement: true,
-            });
+          if (!dbAdapter.DB.objectStoreNames.contains(objectStoreName)) {
+            objectStore = dbAdapter.DB.createObjectStore(objectStoreName);
           } else {
             objectStore = upgradeTransaction.objectStore(objectStoreName);
           }
@@ -49,6 +45,8 @@ var dbAdapter = {
 
           return objectStore;
         }
+
+        objectStore = initObjectStore("testObjectStore")
 
         objectStore = initObjectStore("BodySizeRecords")
         objectStore.createIndex("dateCreated", "dateCreated", { unique: false });
@@ -69,16 +67,31 @@ var dbAdapter = {
         objectStore.createIndex("dateFinished", "dateFinished", { unique: false });
 
         upgradeTransaction.oncomplete = () => {
-          console.log("DB Created/Updated");
-          resolve();
+          resolve("DB upgrade transaction completed succcessfully");
         };
+      };
+    });
+  },
+
+  add: function (objectStoreName, key, value) {
+    return new Promise(function (resolve, reject) {
+      const transaction = dbAdapter.DB.transaction(objectStoreName, "readwrite");
+      const objectStore = transaction.objectStore(objectStoreName);
+      const addRequest = objectStore.add(value, key);
+
+      addRequest.onsuccess = (e) => {
+        resolve();
+      };
+
+      addRequest.onerror = (e) => {
+        reject("db add request failed");
       };
     });
   },
 
   delete: function (objectStoreName, key) {
   return new Promise(function (resolve, reject) {
-    const transaction = DB.transaction(objectStoreName, "readwrite");
+    const transaction = dbAdapter.DB.transaction(objectStoreName, "readwrite");
     const objectStore = transaction.objectStore(objectStoreName);
     const deleteRequest = objectStore.delete(key);
 
@@ -97,7 +110,7 @@ var dbAdapter = {
   getAll: function (objectStoreName) {
     return new Promise(function (resolve, reject) {
       var results = [];
-      const transaction = DB.transaction(objectStoreName);
+      const transaction = dbAdapter.DB.transaction(objectStoreName);
       const objectStore = transaction.objectStore(objectStoreName);
       const openCursorRequest = objectStore.openCursor();
 
@@ -115,7 +128,7 @@ var dbAdapter = {
 
   get: function (objectStoreName, key) {
     return new Promise(function (resolve, reject) {
-      const transaction = DB.transaction(objectStoreName);
+      const transaction = dbAdapter.DB.transaction(objectStoreName);
       const objectStore = transaction.objectStore(objectStoreName);
       const getRequest = objectStore.get(key);
 
@@ -131,7 +144,7 @@ var dbAdapter = {
 
   getFromIndex: function (objectStoreName, indexName, key) {
     return new Promise(function (resolve, reject) {
-      const transaction = DB.transaction(objectStoreName);
+      const transaction = dbAdapter.DB.transaction(objectStoreName);
       const objectStore = transaction.objectStore(objectStoreName);
       const objectStoreIndex = objectStore.index(indexName);
       const getRequest = objectStoreIndex.get(key);
@@ -146,11 +159,11 @@ var dbAdapter = {
     });
   },
 
-  put: function (objectStoreName, key, data) {
+  put: function (objectStoreName, key, item) {
     return new Promise(function (resolve, reject) {
-      const transaction = DB.transaction(objectStoreName, "readwrite");
+      const transaction = dbAdapter.DB.transaction(objectStoreName, "readwrite");
       const objectStore = transaction.objectStore(objectStoreName);
-      const putRequest = objectStore.put(data, key);
+      const putRequest = objectStore.put(item, key);
 
       putRequest.onsuccess = (e) => {
         resolve();
@@ -158,40 +171,6 @@ var dbAdapter = {
 
       putRequest.onerror = (e) => {
         reject("db put request failed");
-      };
-    });
-  },
-
-  update: function (objectStoreName, key, data) {
-    return new Promise(function (resolve, reject) {
-      const transaction = DB.transaction(objectStoreName, "readwrite");
-      const objectStore = transaction.objectStore(objectStoreName);
-      const getRequest = objectStore.get(key);
-
-      getRequest.onsuccess = (e) => {
-        var dbResult = e.target.result;
-
-        if (dbResult) {
-          // update the result with values from the passed data object
-          for (let k in data) {
-            dbResult[k] = data[k];
-          }
-        } else {
-          // valid key passed, but no data found
-          dbResult = data;
-        }
-
-        const putRequest = objectStore.put(result);
-        putRequest.onsuccess = (e) => {
-          resolve();
-        };
-        putRequest.onerror = (e) => {
-          reject("db put request failed");
-        };
-      };
-
-      getRequest.onerror = (e) => {
-        reject("db get request failed");
       };
     });
   },
@@ -211,7 +190,7 @@ var dbAdapter = {
       }
 
       // Get values from each store
-      const transaction = DB.transaction(DB.objectStoreNames, "readonly");
+      const transaction = dbAdapter.DB.transaction(DB.objectStoreNames, "readonly");
       objectStoreNamesArray.forEach(function (objectStoreName) {
         let data = [];
         objectStore = transaction.objectStore(objectStoreName);
@@ -231,7 +210,7 @@ var dbAdapter = {
       });
 
       if (objectStoreNamesArray.length === Object.keys(exportData).length) {
-        exportData.version = DB.version;
+        exportData.version = dbAdapter.DB.version;
         resolve(exportData);
       }
       else {
@@ -242,7 +221,7 @@ var dbAdapter = {
 
   import: function (importData) {
     return new Promise(function (resolve, reject) {
-      const transaction = DB.transaction(DB.objectStoreNames, "readwrite");
+      const transaction = dbAdapter.DB.transaction(DB.objectStoreNames, "readwrite");
 
       transaction.onerror = (e) => {
         console.log("Error importing data.", e.target.error.message);
@@ -312,3 +291,5 @@ var dbAdapter = {
     });
   },
 };
+
+export default dbAdapter;

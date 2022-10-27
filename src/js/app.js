@@ -11,6 +11,8 @@ import cordovaApp from "./cordova-app.js";
 import routes from "./routes.js";
 import store from "./store.js";
 
+import dbAdapter from "./database/db-adapter.js";
+
 // Import main app component
 import App from "../app.f7";
 
@@ -47,3 +49,11 @@ var app = new Framework7({
     },
   },
 });
+
+
+// Database setup
+let initResult = await dbAdapter.initializeDb();
+console.log(initResult);
+
+// save dbAdapter to the javascript window object to make it globally available
+window.dbAdapter = dbAdapter;
