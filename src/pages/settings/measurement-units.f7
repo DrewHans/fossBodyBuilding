@@ -1,5 +1,5 @@
 <template>
-  <div class="page">
+  <div class="page" data-name="about">
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
@@ -9,13 +9,16 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title">Not found</div>
+        <div class="title">Measurement Units Settings</div>
       </div>
     </div>
+
+    <!-- Scrollable page content-->
     <div class="page-content">
       <div class="block block-strong">
-        <p>Sorry</p>
-        <p>Requested content not found.</p>
+        <p>
+          Settings options go here.
+        </p>
       </div>
     </div>
   </div>

@@ -12,10 +12,10 @@
   --f7-bars-translucent-opacity: 0.9;
   --f7-bars-text-color: #fff;
   --f7-bars-link-color: #fff;
-  --f7-navbar-subtitle-text-color: rgba(255,255,255,0.85);
+  --f7-navbar-subtitle-text-color: rgba(255, 255, 255, 0.85);
   --f7-bars-border-color: transparent;
   --f7-tabbar-link-active-color: #fff;
-  --f7-tabbar-link-inactive-color: rgba(255,255,255,0.54);
+  --f7-tabbar-link-inactive-color: rgba(255, 255, 255, 0.54);
   --f7-sheet-border-color: transparent;
   --f7-tabbar-link-active-border-color: #fff;
 }
@@ -29,7 +29,7 @@
   --f7-link-highlight-color: var(--f7-link-highlight-white);
   --f7-link-touch-ripple-color: var(--f7-touch-ripple-white);
   --f7-button-text-color: #fff;
-  --f7-button-pressed-bg-color: rgba(255,255,255,0.1);
+  --f7-button-pressed-bg-color: rgba(255, 255, 255, 0.1);
 }
 .navbar-large-transparent,
 .navbar-large.navbar-transparent {
@@ -57,8 +57,8 @@
   top: 0;
   height: 100%;
   width: 1px;
-  background: rgba(0,0,0,0.1);
-  content: '';
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
   z-index: 6000;
 }
 
@@ -77,13 +77,7 @@
   top: 0;
   height: 100%;
   width: 1px;
-  background: rgba(0,0,0,0.1);
-  content: '';
+  background: rgba(0, 0, 0, 0.1);
+  content: "";
   z-index: 6000;
-}
-
-/* overrides */
-.panel-close.item-content.item-link,
-.panel-close.item-content.item-link .item-inner .item-title {
-  color: white
 }

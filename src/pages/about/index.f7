@@ -1,0 +1,48 @@
+<template>
+  <div class="page" data-name="about">
+    <!-- Top Navbar -->
+    <div class="navbar navbar-large">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title-large">
+          <div class="title-large-text">About</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="block block-strong">
+        <p>
+          fossBodyBuilding is a libre workout tracker app for Android developed by Drew Hans.
+        </p>
+        <p>
+          fossBodyBuilding was built using Framework7 which is under the MIT license and Apache Cordova which is under
+          Apache License Version 2.0.
+          All the HTML, CSS, and JavaScript code that was developed by Drew Hans is under the GPLv3 license.
+        </p>
+
+        <p>
+          The source code for fossBodyBuilding can be found at <a
+            href="https://github.com/drewhans/fossBodyBuilding">github.com/drewhans/fossBodyBuilding</a>
+        </p>
+
+        <p>
+          App Version: 2022.10.27.001
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default () => {
+    return $render;
+  };
+</script>

@@ -12,6 +12,7 @@ import routes from "./routes.js";
 import store from "./store.js";
 
 import dbAdapter from "./database/db-adapter.js";
+import settings from "./settings/settings.js";
 
 // Import main app component
 import App from "../app.f7";
@@ -50,10 +51,19 @@ var app = new Framework7({
   },
 });
 
-
 // Database setup
 let initResult = await dbAdapter.initializeDb();
 console.log(initResult);
 
 // save dbAdapter to the javascript window object to make it globally available
 window.dbAdapter = dbAdapter;
+
+// Apply User Settings when app loads
+const deviceSupportsLocalStorage = "localStorage" in window;
+if (deviceSupportsLocalStorage) {
+  settings.applyUserSettings();
+} else {
+  console.warn(
+    "Device does not support localStorage; user settings will not be saved."
+  );
+}

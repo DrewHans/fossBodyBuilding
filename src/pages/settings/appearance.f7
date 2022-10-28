@@ -1,0 +1,128 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Appearance Settings</div>
+      </div>
+    </div>
+
+    <!-- Scrollable page content-->
+    <div class="page-content">
+
+      <div class="list multi-line-titles">
+        <ul>
+
+          <li>
+            <div class="item-content">
+              <div class="item-inner">
+                <div class="item-title">Dark Mode</div>
+                <div class="item-after">
+                  <label class="toggle toggle-init">
+                    <input type="checkbox" id="darkmodeToggle" />
+                    <span class="toggle-icon"></span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Theme Color</div>
+                <div class="item-input-wrap input-dropdown-wrap">
+                  <select id="themecolorSelector">
+                    <option value="default" selected>Default</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="blue">Blue</option>
+                    <option value="pink">Pink</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="orange">Orange</option>
+                    <option value="purple">Purple</option>
+                    <option value="deeppurple">Deep Purple</option>
+                    <option value="lightblue">Light Blue</option>
+                    <option value="teal">Teal</option>
+                    <option value="lime">Lime</option>
+                    <option value="deeporange">Deep Orange</option>
+                    <option value="gray">Gray</option>
+                    <option value="white">White</option>
+                    <option value="black">Black</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</template>
+
+<script>
+  export default (props, { $, $on, $f7 }) => {
+    $on('pageInit', () => {
+      // ensure the darkmode toggle is correctly checked
+      const darkModePreferenceKey = "apply-dark-mode";
+      const darkModeIsOn = localStorage.getItem(darkModePreferenceKey);
+      if (darkModeIsOn === "true") {
+        document.getElementById("darkmodeToggle").checked = true;
+      } else {
+        document.getElementById("darkmodeToggle").checked = false;
+      }
+
+      // ensure the correct themecolor selector option is selected
+      const colorThemeSettingKey = "color-theme";
+      const currentColorTheme = localStorage.getItem(colorThemeSettingKey);
+      if (currentColorTheme !== 'default') {
+        const selectorElement = document.getElementById("themecolorSelector");
+        for (var i = 0; i < selectorElement.options.length; i++) {
+          if (selectorElement.options[i].value === currentColorTheme) {
+            selectorElement.options[i].selected = true;
+          } else {
+            selectorElement.options[i].selected = false;
+          }
+        }
+      }
+
+      // load event functions
+
+      $('#darkmodeToggle').on('click', async () => {
+        const toggleElement = document.getElementById("darkmodeToggle");
+        if (toggleElement.checked === true) {
+          localStorage.setItem(darkModePreferenceKey, "true");
+          document.documentElement.classList.add("dark");
+        } else {
+          localStorage.setItem(darkModePreferenceKey, "false");
+          document.documentElement.classList.remove("dark");
+        }
+      });
+
+      $('#themecolorSelector').on('click', async () => {
+        const selectorElement = document.getElementById("themecolorSelector");
+        const selectedValue = selectorElement.options[selectorElement.selectedIndex].value;
+        const previousColorTheme = localStorage.getItem(colorThemeSettingKey);
+        if (selectedValue === 'default') {
+          localStorage.setItem(colorThemeSettingKey, "");
+          document.documentElement.classList.remove(`color-theme-${previousColorTheme}`);
+        } else {
+          localStorage.setItem(colorThemeSettingKey, selectedValue);
+          document.documentElement.classList.remove(`color-theme-${previousColorTheme}`);
+          document.documentElement.classList.add(`color-theme-${selectedValue}`);
+        }
+      });
+
+    });
+
+    return $render;
+  }
+</script>

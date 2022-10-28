@@ -1,0 +1,38 @@
+<template>
+  <div class="page" data-name="settings">
+    <!-- Top Navbar -->
+    <div class="navbar navbar-large">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner">
+        <div class="left">
+          <a href="#" class="link icon-only panel-open" data-panel="left">
+            <i class="icon f7-icons if-not-md">menu</i>
+            <i class="icon material-icons if-md">menu</i>
+          </a>
+        </div>
+        <div class="title-large">
+          <div class="title-large-text">App Settings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scrollable page content-->
+    <div class="page-content">
+
+      <div class="list links-list">
+        <ul>
+          <li><a href="/settings/appearance/">Appearance</a></li>
+          <li><a href="/settings/measurement-units/">Measurement Units</a></li>
+          <li><a href="#">Link 3</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</template>
+
+<script>
+  export default () => {
+    return $render;
+  };
+</script>

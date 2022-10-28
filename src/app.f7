@@ -2,7 +2,7 @@
   <div id="app">
 
     <!-- Left panel with cover effect-->
-    <div class="panel panel-left panel-cover dark panel-init">
+    <div class="panel panel-left panel-cover panel-init">
       <div class="view">
         <div class="page">
           <div class="navbar">
@@ -30,6 +30,20 @@
                 </li>
 
                 <li>
+                  <a href="/foodlibrary/"
+                    class="panel-close item-content item-link ${selected === 'foodlibrary' ? 'item-selected' : ''}"
+                    @click=${()=> setItem('foodlibrary')} >
+                    <div class="item-media">
+                      <i class="icon material-icons if-md">menu_book</i>
+                      <i class="icon f7-icons if-not-md">book</i>
+                    </div>
+                    <div class="item-inner">
+                      <div class="item-title">Food Library</div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
                   <a href="/liftinglibrary/"
                     class="panel-close item-content item-link ${selected === 'liftinglibrary' ? 'item-selected' : ''}"
                     @click=${()=> setItem('liftinglibrary')} >
@@ -39,20 +53,6 @@
                     </div>
                     <div class="item-inner">
                       <div class="item-title">Lifting Library</div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/cardiolibrary/"
-                    class="panel-close item-content item-link ${selected === 'cardiolibrary' ? 'item-selected' : ''}"
-                    @click=${()=> setItem('cardiolibrary')} >
-                    <div class="item-media">
-                      <i class="icon material-icons if-md">menu_book</i>
-                      <i class="icon f7-icons if-not-md">book</i>
-                    </div>
-                    <div class="item-inner">
-                      <div class="item-title">Cardio Library</div>
                     </div>
                   </a>
                 </li>

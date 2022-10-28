@@ -1,15 +1,17 @@
-import AboutPage from "../pages/about.f7";
-import CardioLibraryPage from "../pages/cardio-library.f7";
-import HomePage from "../pages/home.f7";
-import LiftingLibraryPage from "../pages/lifting-library.f7";
-import SavedWorkoutsPage from "../pages/saved-workouts.f7";
-import SettingsPage from "../pages/settings.f7";
-import StatisticsPage from "../pages/statistics.f7";
+import AboutPage from "../pages/about/index.f7";
+import HomePage from "../pages/home/index.f7";
+import FoodLibraryPage from "../pages/food-library/index.f7";
+import LiftingLibraryPage from "../pages/lifting-library/index.f7";
+import SavedWorkoutsPage from "../pages/saved-workouts/index.f7";
+import SettingsIndexPage from "../pages/settings/index.f7";
+import SettingsAppearancePage from "../pages/settings/appearance.f7";
+import SettingsMeasurementUnitsPage from "../pages/settings/measurement-units.f7";
+import StatisticsPage from "../pages/statistics/index.f7";
 
-import FormPage from "../pages/form.f7";
+import NotFoundPage from "../pages/404.f7";
+
 import DynamicRoutePage from "../pages/dynamic-route.f7";
 import RequestAndLoad from "../pages/request-and-load.f7";
-import NotFoundPage from "../pages/404.f7";
 
 var routes = [
   {
@@ -23,8 +25,8 @@ var routes = [
   },
 
   {
-    path: "/cardiolibrary/",
-    component: CardioLibraryPage,
+    path: "/foodlibrary/",
+    component: FoodLibraryPage,
   },
 
   {
@@ -39,17 +41,22 @@ var routes = [
 
   {
     path: "/settings/",
-    component: SettingsPage,
+    component: SettingsIndexPage,
+  },
+
+  {
+    path: "/settings/appearance/",
+    component: SettingsAppearancePage,
+  },
+
+  {
+    path: "/settings/measurement-units/",
+    component: SettingsMeasurementUnitsPage,
   },
 
   {
     path: "/statistics/",
     component: StatisticsPage,
-  },
-
-  {
-    path: "/form/",
-    component: FormPage,
   },
 
   {
@@ -65,42 +72,41 @@ var routes = [
       // Show Preloader
       app.preloader.show();
 
-      // User ID from request
+      // get user data using params
       var userId = to.params.userId;
 
-      // Simulate Ajax Request
-      setTimeout(function () {
-        // We got user data from request
-        var user = {
-          firstName: "Vladimir",
-          lastName: "Kharlampidi",
-          about: "Hello, i am creator of Framework7! Hope you like it!",
-          links: [
-            {
-              title: "Framework7 Website",
-              url: "http://framework7.io",
-            },
-            {
-              title: "Framework7 Forum",
-              url: "http://forum.framework7.io",
-            },
-          ],
-        };
-        // Hide Preloader
-        app.preloader.hide();
+      // TODO: fetch request goes here
 
-        // Resolve route to load page
-        resolve(
+      var user = {
+        firstName: "Vladimir",
+        lastName: "Kharlampidi",
+        about: "Hello, i am creator of Framework7! Hope you like it!",
+        links: [
           {
-            component: RequestAndLoad,
+            title: "Framework7 Website",
+            url: "http://framework7.io",
           },
           {
-            props: {
-              user: user,
-            },
-          }
-        );
-      }, 1000);
+            title: "Framework7 Forum",
+            url: "http://forum.framework7.io",
+          },
+        ],
+      };
+
+      // Hide Preloader
+      app.preloader.hide();
+
+      // Resolve route to load page
+      resolve(
+        {
+          component: RequestAndLoad,
+        },
+        {
+          props: {
+            user: user,
+          },
+        }
+      );
     },
   },
   {
