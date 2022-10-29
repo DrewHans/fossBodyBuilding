@@ -1,16 +1,16 @@
 <template>
   <div class="page" data-name="food-library">
-    <!-- Top Navbar -->
     <div class="navbar">
       <div class="navbar-bg"></div>
-      <div class="navbar-inner">
+      <div class="navbar-inner sliding">
         <div class="left">
-          <a href="#" class="link icon-only panel-open" data-panel="left">
-            <i class="icon f7-icons if-not-md">menu</i>
-            <i class="icon material-icons if-md">menu</i>
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title">Food Library</div>
+        <div class="title" id="changableTitle">Select Items</div>
+        <div class="right" id="addButtonArea"></div>
       </div>
     </div>
 
@@ -38,22 +38,8 @@
           </div>
         </form>
 
-        <!-- Food Tab Floating Fab Button -->
-        <div class="fab fab-right-bottom">
-          <a href="#">
-            <i class="icon f7-icons if-not-md">plus</i>
-            <i class="icon f7-icons if-not-md">xmark</i>
-            <i class="icon material-icons md-only">add</i>
-            <i class="icon material-icons md-only">close</i>
-          </a>
-          <div class="fab-buttons fab-buttons-top">
-            <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
-            <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
-          </div>
-        </div>
-
         <div class="block">
-          <p><b>Food Items</b></p>
+          <p><b>Tab 1 content</b></p>
 
           <div class="searchbar-backdrop"></div>
 
@@ -62,8 +48,9 @@
 
               <!-- TEMPLATE li element -->
               <li>
-                <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
-
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="food-item-checkbox" value="foodItem.id" />
+                  <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
                       <div class="item-title">foodItem.foodName</div>
@@ -72,12 +59,13 @@
                     <div class="item-subtitle">foodItem.brandName</div>
                     <div class="item-text">foodItem.servingSize foodItem.servingUnit</div>
                   </div>
-                </a>
+                </label>
               </li>
 
               <li>
-                <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
-
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="food-item-checkbox" value="foodItem.id" />
+                  <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
                       <div class="item-title">Chicken Strips</div>
@@ -86,7 +74,7 @@
                     <div class="item-subtitle">Tyson</div>
                     <div class="item-text">3 ounces</div>
                   </div>
-                </a>
+                </label>
               </li>
 
             </ul>
@@ -95,7 +83,6 @@
           <div class="block searchbar-not-found">
             <div class="block-inner">Nothing found</div>
           </div>
-
         </div>
       </div>
       <!-- end of Food Tab Content -->
@@ -139,19 +126,24 @@
 
               <!-- TEMPLATE li element -->
               <li>
-                <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="meal-item-checkbox" value="mealItem.id" />
+                  <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
-                      <div class="item-title">mealItem.mealName</div>
+                      <div class="item-title">mealItem.foodName</div>
                       <div class="item-after">mealItem.calories kcals</div>
                     </div>
-                    <div class="item-subtitle">mealItem.creatorName</div>
+                    <div class="item-subtitle">mealItem.brandName</div>
+                    <div class="item-text">mealItem.servingSize mealItem.servingUnit</div>
                   </div>
-                </a>
+                </label>
               </li>
 
               <li>
-                <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="meal-item-checkbox" value="mealItem.id" />
+                  <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
                       <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
@@ -159,7 +151,7 @@
                     </div>
                     <div class="item-subtitle">Taco Bell</div>
                   </div>
-                </a>
+                </label>
               </li>
 
             </ul>
@@ -197,7 +189,43 @@
           }
         }
       });
-    })
+
+
+      // load event functions
+
+      $('#addFoodItemsButton').on('click', async () => {
+        const checkboxName = "food-item-checkbox"; // all should have this name
+        const checkboxes = document.getElementsByName(checkboxName);
+        var checkboxesChecked = [];
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            checkboxesChecked.push(checkboxes[i]);
+          }
+        }
+
+        // TODO:
+        // grab foodItem ids from checkboxesChecked
+        // save those food Item ids to the nutrition log
+        // leave this component and go back into nutrition log page
+      });
+
+      $('#addMealItemsButton').on('click', async () => {
+        const checkboxName = "meal-item-checkbox"; // all should have this name
+        const checkboxes = document.getElementsByName(checkboxName);
+        var checkboxesChecked = [];
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            checkboxesChecked.push(checkboxes[i]);
+          }
+        }
+
+        // TODO:
+        // grab mealItem ids from checkboxesChecked
+        // save those mealItem ids to the nutrition log
+        // leave this component and go back into nutrition log page
+      });
+
+    });
 
     return $render;
   }

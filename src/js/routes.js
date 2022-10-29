@@ -1,7 +1,12 @@
 import AboutPage from "../pages/about/index.f7";
 import HomePage from "../pages/home/index.f7";
 import FoodLibraryPage from "../pages/food-library/index.f7";
+import FoodLibraryCreateFoodPage from "../pages/food-library/create-food-item.f7";
+import FoodLibraryCreateMealPage from "../pages/food-library/create-meal-item.f7";
+import FoodLibraryEditFoodPage from "../pages/food-library/edit-food-item.f7";
+import FoodLibraryEditMealPage from "../pages/food-library/edit-meal-item.f7";
 import LiftingLibraryPage from "../pages/lifting-library/index.f7";
+import NutritionLogSelectFoodItemsPage from "../pages/nutrition-log/select-food-items.f7";
 import SavedWorkoutsPage from "../pages/saved-workouts/index.f7";
 import SettingsIndexPage from "../pages/settings/index.f7";
 import SettingsAppearancePage from "../pages/settings/appearance.f7";
@@ -30,8 +35,33 @@ var routes = [
   },
 
   {
+    path: "/foodlibrary/create-food-item/",
+    component: FoodLibraryCreateFoodPage,
+  },
+
+  {
+    path: "/foodlibrary/create-meal-item/",
+    component: FoodLibraryCreateMealPage,
+  },
+
+  {
+    path: "/foodlibrary/edit-food-item/:id",
+    component: FoodLibraryEditFoodPage,
+  },
+
+  {
+    path: "/foodlibrary/edit-meal-item/:id",
+    component: FoodLibraryEditMealPage,
+  },
+
+  {
     path: "/liftinglibrary/",
     component: LiftingLibraryPage,
+  },
+
+  {
+    path: "/nutritionlog/select-food-items/",
+    component: NutritionLogSelectFoodItemsPage,
   },
 
   {

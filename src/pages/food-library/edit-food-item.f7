@@ -1,0 +1,43 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Edit Food Item</div>
+      </div>
+    </div>
+
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <p>Hi, you made it to the Edit Food Item page!</p>
+    </div>
+  </div>
+</template>
+
+<script>
+  export default (props, { $, $on, $f7 }) => {
+    // TODO: write function to load foodItem
+    // const foodItemId = props.id; // passed in from page url (see routes.js)
+    // const foodItem = getFoodItem(foodItemId);
+
+    $on('pageInit', () => {
+
+      // load event functions
+
+      $('#saveFoodDetailsButton').on('click', async () => {
+        // collect food data
+        // save food data to db
+        // return to previous page
+      });
+
+    });
+
+    return $render;
+  }
+</script>
