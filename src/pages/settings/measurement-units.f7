@@ -18,6 +18,20 @@
       <div class="block block-strong">
         <p>
           Settings options go here.
+          Name
+          Gender: male, female, nonbinary
+          DOB
+          Height
+          Height Unit
+          Amputation Left
+          Amputation Right
+          Average Activity Level:
+          - Sedentary
+          - Mild
+          - Moderate
+          - High
+          - Extreme
+
         </p>
       </div>
     </div>

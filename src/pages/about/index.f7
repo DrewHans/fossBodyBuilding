@@ -1,7 +1,7 @@
 <template>
   <div class="page" data-name="about">
     <!-- Top Navbar -->
-    <div class="navbar navbar-large">
+    <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
         <div class="left">
@@ -10,9 +10,7 @@
             <i class="icon material-icons if-md">menu</i>
           </a>
         </div>
-        <div class="title-large">
-          <div class="title-large-text">About</div>
-        </div>
+        <div class="title">About</div>
       </div>
     </div>
 

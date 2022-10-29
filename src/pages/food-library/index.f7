@@ -1,7 +1,7 @@
 <template>
   <div class="page" data-name="food-library">
     <!-- Top Navbar -->
-    <div class="navbar navbar-large">
+    <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
         <div class="left">
@@ -10,54 +10,289 @@
             <i class="icon material-icons if-md">menu</i>
           </a>
         </div>
-        <div class="title-large">
-          <div class="title-large-text">Food Library</div>
-        </div>
+        <div class="title">Food Library</div>
       </div>
     </div>
 
-    <!-- Scrollable page content-->
-    <div class="page-content">
-      <div class="block-title">Food Library Page !</div>
-      <div class="block block-strong">
-        <p>
-          Fugiat perspiciatis excepturi, soluta quod non ullam deleniti. Nobis
-          sint nemo consequuntur, fugiat. Eius perferendis animi autem incidunt
-          vel quod tenetur nostrum, voluptate omnis quasi quidem illum
-          consequuntur, a, quisquam.
-        </p>
-        <p>
-          Laudantium neque magnam vitae nemo quam commodi, in cum dolore
-          obcaecati laborum, excepturi harum, optio qui, consequuntur? Obcaecati
-          dolor sequi nesciunt culpa quia perspiciatis, reiciendis ex debitis,
-          ut tenetur alias.
-        </p>
+    <div class="toolbar tabbar toolbar-bottom">
+      <div class="toolbar-inner">
+        <a href="#tab-1" class="tab-link tab-link-active">Food</a>
+        <a href="#tab-2" class="tab-link">Meals</a>
       </div>
-      <div class="block">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-          molestiae laudantium dignissimos est nobis delectus nemo ea alias
-          voluptatum architecto, amet similique, saepe iste consectetur in
-          repellat ut minus quibusdam!
-        </p>
-        <p>
-          Molestias et distinctio porro nesciunt ratione similique, magni
-          doloribus, rerum nobis, aliquam quae reiciendis quasi modi. Nam a
-          recusandae, fugiat in ea voluptates fuga eius, velit corrupti
-          reprehenderit dignissimos consequatur!
-        </p>
-        <p>
-          Blanditiis, cumque quo adipisci. Molestiae, dolores dolorum quos
-          doloremque ipsa ullam eligendi commodi deserunt doloribus inventore
-          magni? Ea mollitia veniam nostrum nihil, iusto doloribus a at! Ea
-          molestiae ullam delectus!
-        </p>
+    </div>
+
+    <div class="tabs">
+
+      <!-- Food Tab Content -->
+      <div class="page-content tab tab-active" id="tab-1">
+
+        <!-- Food Tab Search Bar -->
+        <form class="searchbar">
+          <div class="searchbar-inner">
+            <div class="searchbar-input-wrap">
+              <input type="search" placeholder="Search" />
+              <i class="searchbar-icon"></i>
+              <span class="input-clear-button"></span>
+            </div>
+            <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+          </div>
+        </form>
+
+        <!-- Food Tab Floating Fab Button -->
+        <div class="fab fab-right-bottom">
+          <a href="#">
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon f7-icons if-not-md">xmark</i>
+            <i class="icon material-icons md-only">add</i>
+            <i class="icon material-icons md-only">close</i>
+          </a>
+          <div class="fab-buttons fab-buttons-top">
+            <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
+            <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
+          </div>
+        </div>
+
+        <div class="block">
+          <p><b>Tab 1 content</b></p>
+
+          <div class="searchbar-backdrop"></div>
+          <div class="list searchbar-found">
+            <ul>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Acura</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Audi</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">BMW</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Cadillac</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Chevrolet</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Chrysler</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Dodge</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Ferrari</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Ford</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">GMC</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Honda</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Hummer</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Hyundai</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Infiniti</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Isuzu</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Jaguar</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Jeep</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Kia</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Lamborghini</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Land Rover</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Lexus</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Lincoln</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Lotus</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Mazda</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Mercedes-Benz</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Mercury</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Mitsubishi</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Nissan</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Oldsmobile</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Peugeot</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Pontiac</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Porsche</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Regal</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Saab</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Saturn</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Subaru</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Suzuki</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Toyota</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Volkswagen</div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Volvo</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="block searchbar-not-found">
+            <div class="block-inner">Nothing found</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Meal Tab Content -->
+      <div class="page-content tab" id="tab-2">
+        <div class="block">
+          <p><b>Tab 2 content</b></p>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
+
 <script>
-  export default () => {
+  export default (props, { $f7, $on }) => {
+    $on('pageInit', () => {
+      // create searchbar
+      var searchbar = $f7.searchbar.create({
+        el: '.searchbar',
+        searchContainer: '.list',
+        searchIn: '.item-title',
+        on: {
+          search(sb, query, previousQuery) {
+            console.log(query, previousQuery);
+          }
+        }
+      });
+    })
+
     return $render;
-  };
+  }
 </script>
