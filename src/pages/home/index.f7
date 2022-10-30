@@ -128,7 +128,6 @@
           <div class="col"><a class="button button-fill remove-set-button" href="#">REMOVE SET</a></div>
         </div>
 
-
       </div>
     </div>
   </div>
@@ -149,7 +148,7 @@
         var newHtmlElementID = `exercise-###-action-${paddedExerciseActionNumberStr}-set-${paddedSetNumberStr}`;
 
         var newHtmlElement = `<div class="block block-strong row" id="${newHtmlElementID}">`;
-        
+
         newHtmlElement += `<div class="col">SET #${setNumber}</div>`;
         newHtmlElement += `<div class="col"><input type="number" name="exercise-###-action-${paddedExerciseActionNumberStr}-set-${paddedSetNumberStr}-reps" placeholder="SET #${setNumber} REPS" /></div>`;
 

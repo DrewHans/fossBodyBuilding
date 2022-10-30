@@ -48,16 +48,10 @@
 
           <!-- Food Tab Floating Fab Button -->
           <div class="fab fab-right-bottom">
-            <a href="#">
+            <a href="/foodlibrary/create-food-item/">
               <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon f7-icons if-not-md">xmark</i>
               <i class="icon material-icons md-only">add</i>
-              <i class="icon material-icons md-only">close</i>
             </a>
-            <div class="fab-buttons fab-buttons-top">
-              <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
-              <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
-            </div>
           </div>
 
           <div class="block">
@@ -105,16 +99,10 @@
 
           <!-- Meal Tab Floating Fab Button -->
           <div class="fab fab-right-bottom">
-            <a href="#">
+            <a href="/foodlibrary/create-meal-item/">
               <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon f7-icons if-not-md">xmark</i>
               <i class="icon material-icons md-only">add</i>
-              <i class="icon material-icons md-only">close</i>
             </a>
-            <div class="fab-buttons fab-buttons-top">
-              <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
-              <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
-            </div>
           </div>
 
           <div class="block">
