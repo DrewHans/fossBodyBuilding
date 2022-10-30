@@ -1,16 +1,25 @@
 import AboutPage from "../pages/about/index.f7";
+
 import HomePage from "../pages/home/index.f7";
+
 import FoodLibraryPage from "../pages/food-library/index.f7";
 import FoodLibraryCreateFoodPage from "../pages/food-library/create-food-item.f7";
 import FoodLibraryCreateMealPage from "../pages/food-library/create-meal-item.f7";
 import FoodLibraryEditFoodPage from "../pages/food-library/edit-food-item.f7";
 import FoodLibraryEditMealPage from "../pages/food-library/edit-meal-item.f7";
+
 import LiftingLibraryPage from "../pages/lifting-library/index.f7";
+import LiftingLibraryCreateExercisePage from "../pages/lifting-library/create-exercise.f7";
+import LiftingLibraryCreateWorkoutPage from "../pages/lifting-library/create-workout.f7";
+import LiftingLibraryEditExercisePage from "../pages/lifting-library/edit-exercise.f7";
+import LiftingLibraryEditWorkoutPage from "../pages/lifting-library/edit-workout.f7";
+
 import NutritionLogSelectFoodItemsPage from "../pages/nutrition-log/select-food-items.f7";
-import SavedWorkoutsPage from "../pages/saved-workouts/index.f7";
+
 import SettingsIndexPage from "../pages/settings/index.f7";
 import SettingsAppearancePage from "../pages/settings/appearance.f7";
 import SettingsMeasurementUnitsPage from "../pages/settings/measurement-units.f7";
+
 import StatisticsPage from "../pages/statistics/index.f7";
 
 import NotFoundPage from "../pages/404.f7";
@@ -60,13 +69,28 @@ var routes = [
   },
 
   {
-    path: "/nutritionlog/select-food-items/",
-    component: NutritionLogSelectFoodItemsPage,
+    path: "/liftinglibrary/create-exercise/",
+    component: LiftingLibraryCreateExercisePage,
   },
 
   {
-    path: "/savedworkouts/",
-    component: SavedWorkoutsPage,
+    path: "/liftinglibrary/create-workout/",
+    component: LiftingLibraryCreateWorkoutPage,
+  },
+
+  {
+    path: "/liftinglibrary/edit-exercise/:id",
+    component: LiftingLibraryEditExercisePage,
+  },
+
+  {
+    path: "/liftinglibrary/edit-workout/:id",
+    component: LiftingLibraryEditWorkoutPage,
+  },
+
+  {
+    path: "/nutritionlog/select-food-items/",
+    component: NutritionLogSelectFoodItemsPage,
   },
 
   {

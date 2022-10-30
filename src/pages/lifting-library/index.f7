@@ -14,48 +14,196 @@
       </div>
     </div>
 
-    <!-- Scrollable page content-->
-    <div class="page-content">
-      <div class="block-title">Lifting Library Page !</div>
-      <div class="block block-strong">
-        <p>
-          Fugiat perspiciatis excepturi, soluta quod non ullam deleniti. Nobis
-          sint nemo consequuntur, fugiat. Eius perferendis animi autem incidunt
-          vel quod tenetur nostrum, voluptate omnis quasi quidem illum
-          consequuntur, a, quisquam.
-        </p>
-        <p>
-          Laudantium neque magnam vitae nemo quam commodi, in cum dolore
-          obcaecati laborum, excepturi harum, optio qui, consequuntur? Obcaecati
-          dolor sequi nesciunt culpa quia perspiciatis, reiciendis ex debitis,
-          ut tenetur alias.
-        </p>
+    <!-- Search Bar -->
+    <form class="searchbar">
+      <div class="searchbar-inner">
+        <div class="searchbar-input-wrap">
+          <input type="search" placeholder="Search" />
+          <i class="searchbar-icon"></i>
+          <span class="input-clear-button"></span>
+        </div>
+        <span class="searchbar-disable-button if-not-aurora">Cancel</span>
       </div>
-      <div class="block">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-          molestiae laudantium dignissimos est nobis delectus nemo ea alias
-          voluptatum architecto, amet similique, saepe iste consectetur in
-          repellat ut minus quibusdam!
-        </p>
-        <p>
-          Molestias et distinctio porro nesciunt ratione similique, magni
-          doloribus, rerum nobis, aliquam quae reiciendis quasi modi. Nam a
-          recusandae, fugiat in ea voluptates fuga eius, velit corrupti
-          reprehenderit dignissimos consequatur!
-        </p>
-        <p>
-          Blanditiis, cumque quo adipisci. Molestiae, dolores dolorum quos
-          doloremque ipsa ullam eligendi commodi deserunt doloribus inventore
-          magni? Ea mollitia veniam nostrum nihil, iusto doloribus a at! Ea
-          molestiae ullam delectus!
-        </p>
+    </form>
+
+    <div class="block searchbar-not-found">
+      <div class="block-inner">Nothing found</div>
+    </div>
+
+    <div class="toolbar tabbar toolbar-bottom">
+      <div class="toolbar-inner">
+        <a href="#exercise-tab" class="tab-link tab-link-active">Exercises</a>
+        <a href="#workout-tab" class="tab-link">Workouts</a>
       </div>
     </div>
+
+    <div class="page-content">
+
+      <div class="searchbar-backdrop"></div>
+
+      <div class="tabs">
+
+        <!-- Exercise Tab Content -->
+        <div class="tab tab-active" id="exercise-tab">
+
+          <!-- Exercise Tab Floating Fab Button -->
+          <div class="fab fab-right-bottom">
+            <a href="/liftinglibrary/create-exercise/">
+              <i class="icon f7-icons if-not-md">plus</i>
+              <i class="icon material-icons md-only">add</i>
+            </a>
+          </div>
+
+          <div class="block">
+            <p><b>Exercises</b></p>
+
+            <div class="list media-list searchbar-found">
+              <ul>
+
+                <!-- TEMPLATE li element -->
+                <li>
+                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">exerciseInfo.exerciseName</div>
+                        <div class="item-after">exerciseInfo.exerciseType</div>
+                      </div>
+                      <div class="item-subtitle">exerciseInfo.equipmentRequired</div>
+                      <div class="item-text">exerciseInfo.muscleTargets</div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Bench Press</div>
+                        <div class="item-after">Compound Lift</div>
+                      </div>
+                      <div class="item-subtitle">Barbell</div>
+                      <div class="item-text">Muscle Targets: Pectoral; anterior deltoids; triceps brachii;</div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Single Arm Biceps Curl</div>
+                        <div class="item-after">Isolation Lift</div>
+                      </div>
+                      <div class="item-subtitle">Dumbbell</div>
+                      <div class="item-text">Muscle Targets: biceps brachii;</div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Pullups</div>
+                        <div class="item-after">Bodyweight Exercise</div>
+                      </div>
+                      <div class="item-subtitle">Pullup bar</div>
+                      <div class="item-text">Muscle Targets: Latissimus dorsi; Teres Major; Trapezius; Pectoralis major;
+                        Biceps;</div>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!-- end of Lifting Tab Content -->
+
+        <!-- Workout Tab Content -->
+        <div class="tab" id="workout-tab">
+
+          <!-- Workout Tab Floating Fab Button -->
+          <div class="fab fab-right-bottom">
+            <a href="/liftinglibrary/create-workout/">
+              <i class="icon f7-icons if-not-md">plus</i>
+              <i class="icon material-icons md-only">add</i>
+            </a>
+          </div>
+
+          <div class="block">
+            <p><b>Meal Items</b></p>
+
+            <div class="list media-list searchbar-found">
+              <ul>
+
+                <!-- TEMPLATE li element -->
+                <li>
+                  <a href="/liftinglibrary/edit-workout/workoutInfo.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">workoutInfo.workoutName</div>
+                        <div class="item-after">workoutInfo.briefDescription</div>
+                      </div>
+                      <div class="item-subtitle">workoutInfo.workoutType</div>
+                      <div class="item-text">Created by workoutInfo.creatorName</div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/liftinglibrary/edit-workout/workoutInfo.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Upper Body - Bench Press Focus</div>
+                        <div class="item-after">This workout blah blah blah</div>
+                      </div>
+                      <div class="item-subtitle">Hypertrophy</div>
+                      <div class="item-text">Created by Drew Hans</div>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!-- end of Workout Tab Content -->
+
+      </div>
+    </div>
+
   </div>
 </template>
+
 <script>
-  export default () => {
+  export default (props, { $f7, $on }) => {
+    // TODO: write function to load exercises
+    // const exercises = getAllExercises();
+    // for exerciseInfo in exercises: load list items with info
+
+    // TODO: write function to load workouts
+    // const workouts = getAllWorkoutTemplates();
+    // for workoutInfo in workouts: load list items with info
+
+    // see: https://framework7.io/docs/router-component#mapping-array-to-elements
+
+    $on('pageInit', () => {
+      // create searchbar
+      var searchbar = $f7.searchbar.create({
+        el: '.searchbar',
+        searchContainer: '.list',
+        searchIn: '.item-title, .item-subtitle, .item-text',
+        on: {
+          search(sb, query, previousQuery) {
+            console.log(query, previousQuery);
+          }
+        }
+      });
+    })
+
     return $render;
-  };
+  }
 </script>

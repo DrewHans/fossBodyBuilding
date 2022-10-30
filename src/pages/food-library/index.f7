@@ -32,8 +32,8 @@
 
     <div class="toolbar tabbar toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="#tab-1" class="tab-link tab-link-active">Food</a>
-        <a href="#tab-2" class="tab-link">Meals</a>
+        <a href="#food-tab" class="tab-link tab-link-active">Food</a>
+        <a href="#meals-tab" class="tab-link">Meals</a>
       </div>
     </div>
 
@@ -44,7 +44,7 @@
       <div class="tabs">
 
         <!-- Food Tab Content -->
-        <div class="tab tab-active" id="tab-1">
+        <div class="tab tab-active" id="food-tab">
 
           <!-- Food Tab Floating Fab Button -->
           <div class="fab fab-right-bottom">
@@ -95,7 +95,7 @@
         <!-- end of Food Tab Content -->
 
         <!-- Meal Tab Content -->
-        <div class="tab" id="tab-2">
+        <div class="tab" id="meals-tab">
 
           <!-- Meal Tab Floating Fab Button -->
           <div class="fab fab-right-bottom">
