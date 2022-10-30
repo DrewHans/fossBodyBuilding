@@ -1,6 +1,6 @@
 <template>
   <div class="page" data-name="about">
-    <!-- Top Navbar -->
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
@@ -32,7 +32,7 @@
         </p>
 
         <p>
-          App Version: 2022.10.27.001
+          App Version: 2022.10.30.001
         </p>
       </div>
     </div>

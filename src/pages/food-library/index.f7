@@ -1,6 +1,6 @@
 <template>
   <div class="page" data-name="food-library">
-    <!-- Top Navbar -->
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
@@ -32,7 +32,7 @@
 
     <div class="toolbar tabbar toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="#food-tab" class="tab-link tab-link-active">Food</a>
+        <a href="#food-tab" class="tab-link tab-link-active">Food Items</a>
         <a href="#meals-tab" class="tab-link">Meals</a>
       </div>
     </div>
@@ -55,7 +55,6 @@
           </div>
 
           <div class="block">
-            <p><b>Food Items</b></p>
 
             <div class="list media-list searchbar-found">
               <ul>
@@ -106,7 +105,6 @@
           </div>
 
           <div class="block">
-            <p><b>Meal Items</b></p>
 
             <div class="list media-list searchbar-found">
               <ul>

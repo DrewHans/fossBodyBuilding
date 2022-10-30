@@ -1,6 +1,6 @@
 <template>
   <div class="page" data-name="lifting-library">
-    <!-- Top Navbar -->
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner">
@@ -55,7 +55,6 @@
           </div>
 
           <div class="block">
-            <p><b>Exercises</b></p>
 
             <div class="list media-list searchbar-found">
               <ul>
@@ -133,7 +132,6 @@
           </div>
 
           <div class="block">
-            <p><b>Meal Items</b></p>
 
             <div class="list media-list searchbar-found">
               <ul>
