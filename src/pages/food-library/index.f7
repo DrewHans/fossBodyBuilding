@@ -14,6 +14,22 @@
       </div>
     </div>
 
+    <!-- Search Bar -->
+    <form class="searchbar">
+      <div class="searchbar-inner">
+        <div class="searchbar-input-wrap">
+          <input type="search" placeholder="Search" />
+          <i class="searchbar-icon"></i>
+          <span class="input-clear-button"></span>
+        </div>
+        <span class="searchbar-disable-button if-not-aurora">Cancel</span>
+      </div>
+    </form>
+
+    <div class="block searchbar-not-found">
+      <div class="block-inner">Nothing found</div>
+    </div>
+
     <div class="toolbar tabbar toolbar-bottom">
       <div class="toolbar-inner">
         <a href="#tab-1" class="tab-link tab-link-active">Food</a>
@@ -21,159 +37,127 @@
       </div>
     </div>
 
-    <div class="tabs">
+    <div class="page-content">
 
-      <!-- Food Tab Content -->
-      <div class="page-content tab tab-active" id="tab-1">
+      <div class="searchbar-backdrop"></div>
 
-        <!-- Food Tab Search Bar -->
-        <form class="searchbar">
-          <div class="searchbar-inner">
-            <div class="searchbar-input-wrap">
-              <input type="search" placeholder="Search" />
-              <i class="searchbar-icon"></i>
-              <span class="input-clear-button"></span>
+      <div class="tabs">
+
+        <!-- Food Tab Content -->
+        <div class="tab tab-active" id="tab-1">
+
+          <!-- Food Tab Floating Fab Button -->
+          <div class="fab fab-right-bottom">
+            <a href="#">
+              <i class="icon f7-icons if-not-md">plus</i>
+              <i class="icon f7-icons if-not-md">xmark</i>
+              <i class="icon material-icons md-only">add</i>
+              <i class="icon material-icons md-only">close</i>
+            </a>
+            <div class="fab-buttons fab-buttons-top">
+              <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
+              <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
             </div>
-            <span class="searchbar-disable-button if-not-aurora">Cancel</span>
           </div>
-        </form>
 
-        <!-- Food Tab Floating Fab Button -->
-        <div class="fab fab-right-bottom">
-          <a href="#">
-            <i class="icon f7-icons if-not-md">plus</i>
-            <i class="icon f7-icons if-not-md">xmark</i>
-            <i class="icon material-icons md-only">add</i>
-            <i class="icon material-icons md-only">close</i>
-          </a>
-          <div class="fab-buttons fab-buttons-top">
-            <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
-            <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
-          </div>
-        </div>
+          <div class="block">
+            <p><b>Food Items</b></p>
 
-        <div class="block">
-          <p><b>Food Items</b></p>
+            <div class="list media-list searchbar-found">
+              <ul>
 
-          <div class="searchbar-backdrop"></div>
-
-          <div class="list media-list searchbar-found">
-            <ul>
-
-              <!-- TEMPLATE li element -->
-              <li>
-                <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
-
-                  <div class="item-inner">
-                    <div class="item-title-row">
-                      <div class="item-title">foodItem.foodName</div>
-                      <div class="item-after">foodItem.calories kcals</div>
+                <!-- TEMPLATE li element -->
+                <li>
+                  <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">foodItem.foodName</div>
+                        <div class="item-after">foodItem.calories kcals</div>
+                      </div>
+                      <div class="item-subtitle">foodItem.brandName</div>
+                      <div class="item-text">foodItem.servingSize foodItem.servingUnit</div>
                     </div>
-                    <div class="item-subtitle">foodItem.brandName</div>
-                    <div class="item-text">foodItem.servingSize foodItem.servingUnit</div>
-                  </div>
-                </a>
-              </li>
+                  </a>
+                </li>
 
-              <li>
-                <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
-
-                  <div class="item-inner">
-                    <div class="item-title-row">
-                      <div class="item-title">Chicken Strips</div>
-                      <div class="item-after">120 kcals</div>
+                <li>
+                  <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Chicken Strips</div>
+                        <div class="item-after">120 kcals</div>
+                      </div>
+                      <div class="item-subtitle">Tyson</div>
+                      <div class="item-text">3 ounces</div>
                     </div>
-                    <div class="item-subtitle">Tyson</div>
-                    <div class="item-text">3 ounces</div>
-                  </div>
-                </a>
-              </li>
+                  </a>
+                </li>
 
-            </ul>
-          </div>
-
-          <div class="block searchbar-not-found">
-            <div class="block-inner">Nothing found</div>
-          </div>
-
-        </div>
-      </div>
-      <!-- end of Food Tab Content -->
-
-      <!-- Meal Tab Content -->
-      <div class="page-content tab" id="tab-2">
-
-        <!-- Meal Tab Search Bar -->
-        <form class="searchbar">
-          <div class="searchbar-inner">
-            <div class="searchbar-input-wrap">
-              <input type="search" placeholder="Search" />
-              <i class="searchbar-icon"></i>
-              <span class="input-clear-button"></span>
+              </ul>
             </div>
-            <span class="searchbar-disable-button if-not-aurora">Cancel</span>
-          </div>
-        </form>
 
-        <!-- Meal Tab Floating Fab Button -->
-        <div class="fab fab-right-bottom">
-          <a href="#">
-            <i class="icon f7-icons if-not-md">plus</i>
-            <i class="icon f7-icons if-not-md">xmark</i>
-            <i class="icon material-icons md-only">add</i>
-            <i class="icon material-icons md-only">close</i>
-          </a>
-          <div class="fab-buttons fab-buttons-top">
-            <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
-            <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
           </div>
         </div>
+        <!-- end of Food Tab Content -->
 
-        <div class="block">
-          <p><b>Meal Items</b></p>
+        <!-- Meal Tab Content -->
+        <div class="tab" id="tab-2">
 
-          <div class="searchbar-backdrop"></div>
-
-          <div class="list media-list searchbar-found">
-            <ul>
-
-              <!-- TEMPLATE li element -->
-              <li>
-                <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
-                  <div class="item-inner">
-                    <div class="item-title-row">
-                      <div class="item-title">mealItem.mealName</div>
-                      <div class="item-after">mealItem.calories kcals</div>
-                    </div>
-                    <div class="item-subtitle">mealItem.creatorName</div>
-                  </div>
-                </a>
-              </li>
-
-              <li>
-                <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
-                  <div class="item-inner">
-                    <div class="item-title-row">
-                      <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
-                      <div class="item-after">690 kcals</div>
-                    </div>
-                    <div class="item-subtitle">Taco Bell</div>
-                  </div>
-                </a>
-              </li>
-
-            </ul>
+          <!-- Meal Tab Floating Fab Button -->
+          <div class="fab fab-right-bottom">
+            <a href="#">
+              <i class="icon f7-icons if-not-md">plus</i>
+              <i class="icon f7-icons if-not-md">xmark</i>
+              <i class="icon material-icons md-only">add</i>
+              <i class="icon material-icons md-only">close</i>
+            </a>
+            <div class="fab-buttons fab-buttons-top">
+              <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
+              <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
+            </div>
           </div>
 
-          <div class="block searchbar-not-found">
-            <div class="block-inner">Nothing found</div>
-          </div>
+          <div class="block">
+            <p><b>Meal Items</b></p>
 
+            <div class="list media-list searchbar-found">
+              <ul>
+
+                <!-- TEMPLATE li element -->
+                <li>
+                  <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">mealItem.mealName</div>
+                        <div class="item-after">mealItem.calories kcals</div>
+                      </div>
+                      <div class="item-subtitle">mealItem.creatorName</div>
+                    </div>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
+                        <div class="item-after">690 kcals</div>
+                      </div>
+                      <div class="item-subtitle">Taco Bell</div>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
         </div>
+        <!-- end of Meal Tab Content -->
+
       </div>
-      <!-- end of Meal Tab Content -->
-
     </div>
+
   </div>
 </template>
 
