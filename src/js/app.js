@@ -12,7 +12,7 @@ import routes from "./routes.js";
 import store from "./store.js";
 
 import dbAdapter from "./database/db-adapter.js";
-import settings from "./settings/settings.js";
+import userSettings from "./settings/settings.js";
 
 // Import main app component
 import App from "../app.f7";
@@ -43,27 +43,39 @@ var app = new Framework7({
   on: {
     init: function () {
       var f7 = this;
+
       if (f7.device.cordova) {
         // Init cordova APIs (see cordova-app.js)
         cordovaApp.init(f7);
       }
+
+      // Database setup
+      let promiseResult = dbAdapter.initializeDb();
+      const onfullfilled = (fullfilledResult) => {
+        console.log("Database successfully initialized");
+        const dbAdapter = fullfilledResult;
+
+        // save dbAdapter to the javascript window object to make it globally available
+        window.dbAdapter = dbAdapter;
+      };
+      const onrejected = (rejectedResult) => {
+        console.error("Failed to initialize database");
+        console.error(rejectedResult);
+      }
+      promiseResult.then(onfullfilled, onrejected);
+
+      // Apply User Settings when app loads
+      const deviceSupportsLocalStorage = "localStorage" in window;
+      if (deviceSupportsLocalStorage) {
+        userSettings.applyUserSettings();
+
+        // save settings to the javascript window object to make it globally available
+        window.userSettings = userSettings;
+      } else {
+        console.warn(
+          "Device does not support localStorage; user settings will not be saved."
+        );
+      }
     },
   },
 });
-
-// Database setup
-let initResult = await dbAdapter.initializeDb();
-console.log(initResult);
-
-// save dbAdapter to the javascript window object to make it globally available
-window.dbAdapter = dbAdapter;
-
-// Apply User Settings when app loads
-const deviceSupportsLocalStorage = "localStorage" in window;
-if (deviceSupportsLocalStorage) {
-  settings.applyUserSettings();
-} else {
-  console.warn(
-    "Device does not support localStorage; user settings will not be saved."
-  );
-}

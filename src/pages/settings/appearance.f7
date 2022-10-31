@@ -34,31 +34,31 @@
           </li>
 
           <li>
-            <div class="item-content item-input">
-              <div class="item-inner">
-                <div class="item-title item-label">Theme Color</div>
-                <div class="item-input-wrap input-dropdown-wrap">
-                  <select id="themecolorSelector">
-                    <option value="default" selected>Default</option>
-                    <option value="red">Red</option>
-                    <option value="green">Green</option>
-                    <option value="blue">Blue</option>
-                    <option value="pink">Pink</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="orange">Orange</option>
-                    <option value="purple">Purple</option>
-                    <option value="deeppurple">Deep Purple</option>
-                    <option value="lightblue">Light Blue</option>
-                    <option value="teal">Teal</option>
-                    <option value="lime">Lime</option>
-                    <option value="deeporange">Deep Orange</option>
-                    <option value="gray">Gray</option>
-                    <option value="white">White</option>
-                    <option value="black">Black</option>
-                  </select>
+            <a class="item-link smart-select smart-select-init">
+              <select id="themecolor-selector">
+                <option value="default" selected>Default</option>
+                <option value="red">Red</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+                <option value="pink">Pink</option>
+                <option value="yellow">Yellow</option>
+                <option value="orange">Orange</option>
+                <option value="purple">Purple</option>
+                <option value="deeppurple">Deep Purple</option>
+                <option value="lightblue">Light Blue</option>
+                <option value="teal">Teal</option>
+                <option value="lime">Lime</option>
+                <option value="deeporange">Deep Orange</option>
+                <option value="gray">Gray</option>
+                <option value="white">White</option>
+                <option value="black">Black</option>
+              </select>
+              <div class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Theme Color</div>
                 </div>
               </div>
-            </div>
+            </a>
           </li>
 
         </ul>
@@ -84,7 +84,7 @@
       const colorThemeSettingKey = "color-theme";
       const currentColorTheme = localStorage.getItem(colorThemeSettingKey);
       if (currentColorTheme !== 'default') {
-        const selectorElement = document.getElementById("themecolorSelector");
+        const selectorElement = document.getElementById("themecolor-selector");
         for (var i = 0; i < selectorElement.options.length; i++) {
           if (selectorElement.options[i].value === currentColorTheme) {
             selectorElement.options[i].selected = true;
@@ -107,18 +107,14 @@
         }
       });
 
-      $('#themecolorSelector').on('click', async () => {
-        const selectorElement = document.getElementById("themecolorSelector");
+      $('#themecolor-selector').on('change', async () => {
+        const selectorElement = document.getElementById("themecolor-selector");
         const selectedValue = selectorElement.options[selectorElement.selectedIndex].value;
         const previousColorTheme = localStorage.getItem(colorThemeSettingKey);
-        if (selectedValue === 'default') {
-          localStorage.setItem(colorThemeSettingKey, "");
-          document.documentElement.classList.remove(`color-theme-${previousColorTheme}`);
-        } else {
-          localStorage.setItem(colorThemeSettingKey, selectedValue);
-          document.documentElement.classList.remove(`color-theme-${previousColorTheme}`);
-          document.documentElement.classList.add(`color-theme-${selectedValue}`);
-        }
+
+        document.documentElement.classList.remove(`color-theme-${previousColorTheme}`);
+        localStorage.setItem(colorThemeSettingKey, selectedValue);
+        window.userSettings.applyColorTheme();
       });
 
     });
