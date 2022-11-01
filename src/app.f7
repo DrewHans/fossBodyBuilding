@@ -118,7 +118,8 @@
       </div>
     </div>
 
-    <!-- Your main view, should have "view-main" class -->
+    <!-- Your main view should have "view-main" class -->
+    <!-- loads component at route "/" -->
     <div class="view view-main view-init safe-areas" data-url="/"></div>
 
   </div>

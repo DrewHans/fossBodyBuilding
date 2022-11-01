@@ -33,7 +33,6 @@ var settings = {
       "lime": "#cddc39",
       "deeporange": "#ff6b22",
       "gray": "#8e8e93",
-      "white": "#ffffff",
       "black": "#000000",
     };
 

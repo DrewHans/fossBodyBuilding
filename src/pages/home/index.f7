@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="home">
+  <div class="page page-with-subnavbar" data-name="home">
 
     <div class="navbar">
       <div class="navbar-bg"></div>
@@ -14,6 +14,18 @@
       </div>
     </div>
 
+    <div class="subnavbar">
+      <div class="subnavbar-inner show-values">
+        <div>
+          <a href="#" class="link icon-only" id="load-previous-day"><i class="icon icon-back"></i></a>
+        </div>
+        <div id="date-displayed"></div>
+        <div>
+          <a href="#" class="link icon-only" id="load-next-day"><i class="icon icon-forward"></i></a>
+        </div>
+      </div>
+    </div>
+
     <div class="toolbar tabbar toolbar-bottom">
       <div class="toolbar-inner">
         <a href="#nutrition-diary-tab" class="tab-link tab-link-active">Nutrition Diary</a>
@@ -24,23 +36,46 @@
 
     <div class="page-content">
 
-      <div class="block block-strong">
-        <p>
-          Thanks for trying out FOSS BodyBuilding! This app is still under heavy
-          development. Please report an issues you find on github. Thanks!
-        </p>
-      </div>
-
-
       <div class="tabs">
 
         <!-- Nutrition Diary Tab Content -->
         <div class="tab tab-active" id="nutrition-diary-tab">
 
+          <!-- Daily Nutrition Stats -->
+          <div class="toolbar">
+            <div class="toolbar-inner ripple" id="nutrition-stats-toolbar">
+              <div class="col">
+              </div>
+              <div class="col">
+                <div class="row">Calories</div>
+                <div class="row" id="energy-stat">2000/3500</div>
+              </div>
+              <div class="col">
+                <div class="row">Proteins</div>
+                <div class="row" id="protein-stat">200/300</div>
+              </div>
+              <div class="col">
+                <div class="row">Carbs</div>
+                <div class="row" id="carb-stat">350/500</div>
+              </div>
+              <div class="col">
+                <div class="row">Fats</div>
+                <div class="row" id="fat-stat">40/60</div>
+              </div>
+              <div class="col">
+                <div class="row">Water</div>
+                <div class="row" id="water-stat">3000/4000</div>
+              </div>
+              <div class="col">
+              </div>
+            </div>
+          </div>
+
           <div class="block">
             <p><b>Nutrition Diary Tab</b></p>
-
           </div>
+
+
         </div>
         <!-- end of Nutrition Diary Tab Content -->
 
@@ -72,7 +107,74 @@
 
 <script>
   export default (props, { $, $on, $f7 }) => {
+
     $on('pageInit', () => {
+      const clearDiaryRecords = () => {
+        // TODO: clear diary
+      };
+
+      const loadDiaryRecords = (diaryDate) => {
+        // load all records with date diaryDate
+      };
+
+      const updateDateDisplayed = (newDate) => {
+        dateDiv.innerHTML = newDate.toDateString();
+        dateSelected = newDate;
+      };
+
+      const updateNutritionStats = () => { };
+
+      const dateToday = new Date();
+      var dateSelected = dateToday;
+
+      const dateDiv = document.getElementById("date-displayed");
+      dateDiv.innerHTML = dateToday.toDateString();
+
+      const datePicker = $f7.calendar.create({
+        inputEl: '#date-displayed',
+        closeOnSelect: true,
+        on: {
+          closed: (calenderObject) => {
+            let calendarValue = calenderObject.value;
+            if (calendarValue === null || calendarValue === undefined) {
+              calendarValue = new Date();
+            }
+            const selectedCalendarDate = new Date(calendarValue)
+            updateDateDisplayed(selectedCalendarDate);
+            clearDiaryRecords();
+            loadDiaryRecords(selectedCalendarDate);
+          }
+        }
+      });
+
+      // load event functions
+
+      $('#load-previous-day').on('click', async () => {
+        var previousDate = new Date(dateSelected);
+        previousDate.setDate(previousDate.getDate() - 1);
+        updateDateDisplayed(previousDate);
+        clearDiaryRecords();
+        loadDiaryRecords(previousDate);
+      });
+
+      $('#load-next-day').on('click', async () => {
+        var nextDate = new Date(dateSelected);
+        nextDate.setDate(nextDate.getDate() + 1);
+        updateDateDisplayed(nextDate);
+        clearDiaryRecords();
+        loadDiaryRecords(nextDate);
+      });
+
+      $('#nutrition-stats-toolbar').on('click', async () => {
+        console.log("hi")
+        // TODO update elements (toggle intake vs remaining stat) with ids:
+        // energy-stat
+        // protein-stat
+        // carb-stat
+        // fat-stat
+        // water-stat
+      });
+
     });
 
     return $render;
