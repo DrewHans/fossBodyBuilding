@@ -9,8 +9,7 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title" id="changableTitle">Select Items</div>
-        <div class="right" id="addButtonArea"></div>
+        <div class="title" id="changableTitle">Select Items To Add</div>
       </div>
     </div>
 
@@ -37,6 +36,14 @@
       </div>
     </div>
 
+    <!-- Save selected items FAB -->
+    <div class="fab fab-right-bottom">
+      <a href="#" id="submit-items">
+        <i class="icon f7-icons if-not-md">checkmark</i>
+        <i class="icon material-icons md-only">done</i>
+      </a>
+    </div>
+
     <div class="page-content">
 
       <div class="searchbar-backdrop"></div>
@@ -46,22 +53,15 @@
         <!-- Food Tab Content -->
         <div class="tab tab-active" id="tab-1">
 
-          <!-- Food Tab Floating Fab Button -->
-          <div class="fab fab-right-bottom">
-            <a href="#">
+          <!-- Add New Food Item FAB -->
+          <div class="fab fab-left-bottom">
+            <a href="#" id="create-new-food-item">
               <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon f7-icons if-not-md">xmark</i>
               <i class="icon material-icons md-only">add</i>
-              <i class="icon material-icons md-only">close</i>
             </a>
-            <div class="fab-buttons fab-buttons-top">
-              <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
-              <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
-            </div>
           </div>
 
           <div class="block">
-            <p><b>Food Items</b></p>
 
             <div class="list media-list searchbar-found">
               <ul>
@@ -107,22 +107,15 @@
         <!-- Meal Tab Content -->
         <div class="tab" id="tab-2">
 
-          <!-- Meal Tab Floating Fab Button -->
-          <div class="fab fab-right-bottom">
-            <a href="#">
+          <!-- Add New Meal Item FAB -->
+          <div class="fab fab-left-bottom">
+            <a href="#" id="create-new-meal-item">
               <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon f7-icons if-not-md">xmark</i>
               <i class="icon material-icons md-only">add</i>
-              <i class="icon material-icons md-only">close</i>
             </a>
-            <div class="fab-buttons fab-buttons-top">
-              <a class="fab-label-button" href="#"><span>1</span><span class="fab-label">Action 1</span></a>
-              <a class="fab-label-button" href="#"><span>2</span><span class="fab-label">Action 2</span></a>
-            </div>
           </div>
 
           <div class="block">
-            <p><b>Meal Items</b></p>
 
             <div class="list media-list searchbar-found">
               <ul>
@@ -171,7 +164,7 @@
 </template>
 
 <script>
-  export default (props, { $f7, $on }) => {
+  export default (props, { $, $on, $f7 }) => {
     // TODO: write function to load foodItems
     // const foodItems = getFoodItems();
     // TODO: write function to load mealItems
@@ -191,38 +184,32 @@
         }
       });
 
-
       // load event functions
 
-      $('#addFoodItemsButton').on('click', async () => {
-        const checkboxName = "food-item-checkbox"; // all should have this name
-        const checkboxes = document.getElementsByName(checkboxName);
+      $('#create-new-food-item').on('click', async () => {
+        console.log("Create new food item FAB was pressed");
+      });
+      $('#create-new-meal-item').on('click', async () => {
+        console.log("Create new meal item FAB was pressed");
+      });
+
+      $('#submit-items').on('click', async () => {
+        console.log("Submit items FAB was pressed")
+        const foodItemsCheckboxName = "food-item-checkbox"; // all should have this name
+        const foodItemCheckboxes = document.getElementsByName(foodItemsCheckboxName);
         var checkboxesChecked = [];
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].checked) {
-            checkboxesChecked.push(checkboxes[i]);
+        for (var i = 0; i < foodItemCheckboxes.length; i++) {
+          if (foodItemCheckboxes[i].checked) {
+            checkboxesChecked.push(foodItemCheckboxes[i]);
           }
         }
 
         // TODO:
         // grab foodItem ids from checkboxesChecked
         // save those food Item ids to the nutrition log
-        // leave this component and go back into nutrition log page
-      });
 
-      $('#addMealItemsButton').on('click', async () => {
-        const checkboxName = "meal-item-checkbox"; // all should have this name
-        const checkboxes = document.getElementsByName(checkboxName);
-        var checkboxesChecked = [];
-        for (var i = 0; i < checkboxes.length; i++) {
-          if (checkboxes[i].checked) {
-            checkboxesChecked.push(checkboxes[i]);
-          }
-        }
+        // TODO: get food items linked to meal item ids and add them to nutrition log
 
-        // TODO:
-        // grab mealItem ids from checkboxesChecked
-        // save those mealItem ids to the nutrition log
         // leave this component and go back into nutrition log page
       });
 

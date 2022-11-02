@@ -97,7 +97,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -124,7 +126,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -151,7 +155,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -178,7 +184,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -205,7 +213,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -232,7 +242,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -259,7 +271,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -286,7 +300,9 @@
                   </div>
                 </li>
                 <li class="accordion-item">
-                  <div class="item-content">+</div>
+                  <div class="item-content">
+                    <a href="/track-food-items/">+</a>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -309,6 +325,27 @@
 
         <!-- Body Diary Tab Content -->
         <div class="tab" id="body-diary-tab">
+
+          <!-- Track Body Weight / Part Size FAB -->
+          <div class="fab-backdrop"></div>
+          <div class="fab fab-right-bottom">
+            <a href="#">
+              <i class="icon f7-icons if-not-md">plus</i>
+              <i class="icon f7-icons if-not-md">xmark</i>
+              <i class="icon material-icons md-only">add</i>
+              <i class="icon material-icons md-only">close</i>
+            </a>
+            <div class="fab-buttons fab-buttons-top">
+              <a class="fab-label-button" href="/track-body-weight/">
+                <span><i class="icon material-icons md-only">chevron_right</i></span>
+                <span class="fab-label">Track Body Weight</span>
+              </a>
+              <a class="fab-label-button" href="/track-body-part-sizes/">
+                <span><i class="icon material-icons md-only">chevron_right</i></span>
+                <span class="fab-label">Track Body Part Size</span>
+              </a>
+            </div>
+          </div>
 
           <div class="block">
             <p><b>Body Diary Tab</b></p>

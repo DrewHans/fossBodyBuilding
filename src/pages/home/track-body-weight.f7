@@ -1,0 +1,50 @@
+<template>
+  <div class="page" data-name="food-library">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title" id="changableTitle">Track Weight</div>
+      </div>
+    </div>
+
+
+    <!-- Save weight FAB -->
+    <div class="fab fab-right-bottom">
+      <a href="#" id="submit-weight">
+        <i class="icon f7-icons if-not-md">checkmark</i>
+        <i class="icon material-icons md-only">done</i>
+      </a>
+    </div>
+
+    <div class="page-content">
+
+      <div class="block">
+        <p><b>Track Body Weight</b></p>
+      </div>
+    </div>
+
+  </div>
+</template>
+
+<script>
+  export default (props, { $, $on, $f7 }) => {
+
+    $on('pageInit', () => {
+      // load event functions
+
+      $('#submit-weight').on('click', async () => {
+        console.log("Submit weight FAB was pressed");
+      });
+
+
+    });
+
+    return $render;
+  }
+</script>
