@@ -6,6 +6,8 @@ import TrackFoodItemsPage from "../pages/home/track-food-items.f7";
 import TrackBodyPartSizesPage from "../pages/home/track-body-part-sizes.f7";
 import TrackBodyWeightPage from "../pages/home/track-body-weight.f7";
 
+import ViewPastWorkoutPage from "../pages/home/view-past-workout.f7";
+
 import FoodLibraryPage from "../pages/food-library/index.f7";
 import FoodLibraryCreateFoodPage from "../pages/food-library/create-food-item.f7";
 import FoodLibraryCreateMealPage from "../pages/food-library/create-meal-item.f7";
@@ -96,21 +98,6 @@ var routes = [
   },
 
   {
-    path: "/track-body-part-sizes/",
-    component: TrackBodyPartSizesPage,
-  },
-
-  {
-    path: "/track-body-weight/",
-    component: TrackBodyWeightPage,
-  },
-
-  {
-    path: "/track-food-items/",
-    component: TrackFoodItemsPage,
-  },
-
-  {
     path: "/settings/",
     component: SettingsIndexPage,
   },
@@ -153,6 +140,26 @@ var routes = [
   {
     path: "/statistics/",
     component: StatisticsPage,
+  },
+
+  {
+    path: "/track-body-part-sizes/",
+    component: TrackBodyPartSizesPage,
+  },
+
+  {
+    path: "/track-body-weight/",
+    component: TrackBodyWeightPage,
+  },
+
+  {
+    path: "/track-food-items/",
+    component: TrackFoodItemsPage,
+  },
+
+  {
+    path: "/view-past-workout/:id",
+    component: ViewPastWorkoutPage
   },
 
   {

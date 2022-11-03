@@ -16,18 +16,126 @@
 
     <div class="toolbar tabbar toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="#nutrition-diary-tab" class="tab-link tab-link-active">Nutrition Diary</a>
-        <a href="#training-diary-tab" class="tab-link">Training Diary</a>
-        <a href="#body-diary-tab" class="tab-link">Body Diary</a>
+        <a href="#body-comp-tab" class="tab-link">Body Composition</a>
+        <a href="#nutrition-tab" class="tab-link tab-link-active">Nutrition</a>
+        <a href="#training-tab" class="tab-link">Training</a>
       </div>
     </div>
 
-    <div class="page-content">
 
+    <!-- Track Body Weight / Part Size FAB -->
+    <!-- needs to be outside of tabs for scroll to work correctly -->
+    <!-- is hidden / shown via javascript events -->
+    <div class="fab-backdrop"></div>
+    <div class="fab fab-right-bottom margin-right-half" id="track-body-weight-fab" hidden>
+      <a href="#">
+        <i class="icon f7-icons if-not-md">plus</i>
+        <i class="icon f7-icons if-not-md">xmark</i>
+        <i class="icon material-icons md-only">add</i>
+        <i class="icon material-icons md-only">close</i>
+      </a>
+      <div class="fab-buttons fab-buttons-top">
+        <a class="fab-label-button" href="/track-body-weight/">
+          <span><i class="icon material-icons md-only">chevron_right</i></span>
+          <span class="fab-label">Track Body Weight</span>
+        </a>
+        <a class="fab-label-button" href="/track-body-part-sizes/">
+          <span><i class="icon material-icons md-only">chevron_right</i></span>
+          <span class="fab-label">Track Body Part Size</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="tabs-animated-wrap">
       <div class="tabs">
 
-        <!-- Nutrition Diary Tab Content -->
-        <div class="tab tab-active" id="nutrition-diary-tab">
+        <!-- Body Composition Tab Content -->
+        <div class="page-content tab" id="body-comp-tab">
+
+          <div class="block">
+
+            <div class="row">
+              <div class="col">
+                <canvas id="myChart" width="100" height="100" aria-label="Chart which graphs the last 10 weigh-ins"
+                  role="img">
+                  <p>Your browser does not support the canvas element.</p>
+                </canvas>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-header">
+                    <div></div>
+                    <div>Last Weigh-In</div>
+                    <div></div>
+                  </div>
+                  <div class="card-content card-content-padding">
+                    <p class="text-align-center" style="font-size: 2em">284.00 lb</p>
+                  </div>
+                  <div class="card-footer">
+                    <div></div>
+                    <div>Tuesday November 01, 2022</div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-header">
+                    <div></div>
+                    <div>Weight Change</div>
+                    <div></div>
+                  </div>
+                  <div class="card-content card-content-padding">
+                    <p class="text-align-center" style="font-size: 2em">
+                      <i class="icon material-icons if-md">south</i>
+                      <i class="icon f7-icons if-not-md">arrow_down</i> 3.00 lb
+                    </p>
+                  </div>
+                  <div class="card-footer">
+                    <div></div>
+                    <div>Since Sun October 23, 2022</div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-header">
+                    <div></div>
+                    <div>Average Weight</div>
+                    <div></div>
+                  </div>
+                  <div class="card-content card-content-padding">
+                    <p class="text-align-center" style="font-size: 2em">285.07 lb</p>
+                  </div>
+                  <div class="card-footer">
+                    <div></div>
+                    <div>Sunday October 23, 2022 - Tuesday November 01, 2022</div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="row margin-bottom"></div>
+          <div class="row margin-bottom"></div>
+
+        </div>
+        <!-- end of Body Composition Tab Content -->
+
+        <!-- Nutrition Tab Content -->
+        <div class="page-content tab tab-active" id="nutrition-tab">
 
           <div class="toolbar">
             <div class="toolbar-inner show-values">
@@ -67,9 +175,9 @@
             </div>
           </div>
 
-          <div class="block">
+          <!-- TEST CODE BELOW -->
 
-            <!-- TEST CODE BELOW -->
+          <div class="block">
 
             <div class="list">
               <ul>
@@ -419,106 +527,88 @@
 
           </div>
         </div>
-        <!-- end of Nutrition Diary Tab Content -->
+        <!-- end of Nutrition Tab Content -->
 
-        <!-- Training Diary Tab Content -->
-        <div class="tab" id="training-diary-tab">
-
+        <!-- Training Tab Content -->
+        <div class="page-content tab" id="training-tab">
           <div class="block">
-            <p><b>Training Diary Tab</b></p>
 
-          </div>
-        </div>
-        <!-- end of Training Diary Tab Content -->
+            <!-- TODO: Insert Calendar Graph Here-->
 
-        <!-- Body Diary Tab Content -->
-        <div class="tab" id="body-diary-tab">
+            <div class="block-title">Workout History</div>
+            <div class="list media-list searchbar-found">
+              <ul>
 
-          <div class="block">
-          <!-- Track Body Weight / Part Size FAB -->
-          <div class="fab-backdrop"></div>
-          <div class="fab fab-right-bottom">
-            <a href="#">
-              <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon f7-icons if-not-md">xmark</i>
-              <i class="icon material-icons md-only">add</i>
-              <i class="icon material-icons md-only">close</i>
-            </a>
-            <div class="fab-buttons fab-buttons-top">
-              <a class="fab-label-button" href="/track-body-weight/">
-                <span><i class="icon material-icons md-only">chevron_right</i></span>
-                <span class="fab-label">Track Body Weight</span>
-              </a>
-              <a class="fab-label-button" href="/track-body-part-sizes/">
-                <span><i class="icon material-icons md-only">chevron_right</i></span>
-                <span class="fab-label">Track Body Part Size</span>
-              </a>
-            </div>
-          </div>
+                <li>
+                  <a href="/view-past-workout/workoutid" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Upper Body Hypertrophy - Back Focus</div>
+                        <div class="item-after">56 min</div>
+                      </div>
+                      <div class="item-subtitle">Fri Nov 04, 2022 09:45 AM</div>
+                    </div>
+                  </a>
+                </li>
 
+                <li>
+                  <a href="/view-past-workout/workoutid" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Lower Body Hypertrophy - Squat Focus</div>
+                        <div class="item-after">45 min</div>
+                      </div>
+                      <div class="item-subtitle">Thu Nov 03, 2022 09:45 AM</div>
+                    </div>
+                  </a>
+                </li>
 
-            <div class="row">
-              <canvas id="myChart" width="100" height="100" aria-label="Chart which graphs the last 10 weigh-ins"
-                role="img">
-                <p>Your browser does not support the canvas element.</p>
-              </canvas>
-            </div>
+                <li>
+                  <a href="/view-past-workout/workoutid" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Upper Body Hypertrophy - Chest Focus</div>
+                        <div class="item-after">52 min</div>
+                      </div>
+                      <div class="item-subtitle">Tue Nov 01, 2022 09:45 AM</div>
+                    </div>
+                  </a>
+                </li>
 
-            <div class="row">
-              <div class="col">
-                <div class="card">
-                  <div class="card-header">
-                    <div></div>
-                    <div>Last Weigh-In</div>
-                    <div></div>
-                  </div>
-                  <div class="card-content card-content-padding">
-                    <p class="text-align-center" style="font-size: 8em">284 lb</p>
-                  </div>
-                  <div class="card-footer">
-                    <div></div>
-                    <div>Tuesday November 01, 2022</div>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <li>
+                  <a href="/view-past-workout/workoutid" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Lower Body Hypertrophy - RDL Focus</div>
+                        <div class="item-after">58 min</div>
+                      </div>
+                      <div class="item-subtitle">Mon Oct 31, 2022 09:45 AM</div>
+                    </div>
+                  </a>
+                </li>
 
-            <div>
-              <p>Last 7 Weigh-Ins:</p>
-            </div>
+                <li>
+                  <a href="/view-past-workout/workoutid" class="item-link item-content">
+                    <div class="item-inner">
+                      <div class="item-title-row">
+                        <div class="item-title">Free Workout</div>
+                        <div class="item-after">32 min</div>
+                      </div>
+                      <div class="item-subtitle">Sun Oct 30, 2022 01:45 PM</div>
+                    </div>
+                  </a>
+                </li>
 
-            <div>
-              <p>- Weight Average: 285.07 lb (across 7 days)</p>
-            </div>
-
-            <div>
-              <p>- Highest Weight: 287 lb on 10-28</p>
-            </div>
-
-            <div>
-              <p>- Lowest Weight: 283 lb on 10-30</p>
-            </div>
-
-            <div>
-              <p>- Delta (from average): -1.07 lb</p>
-            </div>
-
-            <div>
-              <p>- Delta (from highest): -3 lb from 10-28</p>
-            </div>
-
-            <div>
-              <p>- Delta (from lowest): +1 lb from 10-30</p>
+              </ul>
             </div>
 
           </div>
         </div>
-        <!-- end of Body Diary Tab Content -->
+        <!-- end of Training Tab Content -->
 
       </div>
-
     </div>
+
   </div>
 </template>
 
@@ -530,7 +620,7 @@
       // init body weight chart
       const data = {
         datasets: [{
-          label: 'Weight Change',
+          label: 'Weight',
           backgroundColor: 'rgba(54, 162, 235, 0.5)',
           borderColor: 'rgba(54, 162, 235, 0.5)',
           borderWidth: 4,
@@ -566,18 +656,27 @@
         },
         scales: {
           x: {
+            ticks: {
+              color: 'rgba(255, 255, 255, 0.5)'
+            },
             title: {
+              color: 'rgba(255, 255, 255, 0.8)',
               display: true,
               text: 'Date ( last 7 weigh-ins )'
             }
           },
           y: {
-            title: {
-              display: true,
-              text: 'Weight ( lb )'
+            grid: {
+              color: 'rgba(54, 162, 235, 0.2)'
             },
             ticks: {
-              stepSize: 0.5
+              color: 'rgba(255, 255, 255, 0.5)',
+              stepSize: 0.5,
+            },
+            title: {
+              color: 'rgba(255, 255, 255, 0.8)',
+              display: true,
+              text: 'Weight ( lb )'
             }
           }
         }
@@ -594,11 +693,11 @@
         config
       );
 
-      const clearDiaryRecords = () => {
+      const clearRecords = () => {
         // TODO: clear diary
       };
 
-      const loadDiaryRecords = (diaryDate) => {
+      const loadRecords = (diaryDate) => {
         // load all records with date diaryDate
       };
 
@@ -626,8 +725,8 @@
             }
             const selectedCalendarDate = new Date(calendarValue)
             updateDateDisplayed(selectedCalendarDate);
-            clearDiaryRecords();
-            loadDiaryRecords(selectedCalendarDate);
+            clearRecords();
+            loadRecords(selectedCalendarDate);
           }
         }
       });
@@ -638,16 +737,16 @@
         var previousDate = new Date(dateSelected);
         previousDate.setDate(previousDate.getDate() - 1);
         updateDateDisplayed(previousDate);
-        clearDiaryRecords();
-        loadDiaryRecords(previousDate);
+        clearRecords();
+        loadRecords(previousDate);
       });
 
       $('#load-next-day').on('click', async () => {
         var nextDate = new Date(dateSelected);
         nextDate.setDate(nextDate.getDate() + 1);
         updateDateDisplayed(nextDate);
-        clearDiaryRecords();
-        loadDiaryRecords(nextDate);
+        clearRecords();
+        loadRecords(nextDate);
       });
 
       $('#nutrition-stats-toolbar').on('click', async () => {
@@ -658,6 +757,22 @@
         // carb-stat
         // fat-stat
         // water-stat
+      });
+
+      $('#body-comp-tab').on('tab:show', async () => {
+        console.log("tab show event fired")
+
+        setTimeout(() => {
+          const fabElement = document.getElementById("track-body-weight-fab")
+          fabElement.hidden = false;
+        }, 300)
+
+      });
+
+      $('#body-comp-tab').on('tab:hide', async () => {
+        console.log("tab hide event fired")
+        const fabElement = document.getElementById("track-body-weight-fab")
+        fabElement.hidden = true;
       });
 
     });

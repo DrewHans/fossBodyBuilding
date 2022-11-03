@@ -13,15 +13,15 @@
       </div>
     </div>
 
-    <!-- Save weight FAB -->
-    <div class="fab fab-right-bottom">
-      <a href="#" id="submit-body-part-sizes">
-        <i class="icon f7-icons if-not-md">checkmark</i>
-        <i class="icon material-icons md-only">done</i>
-      </a>
-    </div>
-
     <div class="page-content">
+
+      <!-- Save weight FAB -->
+      <div class="fab fab-right-bottom">
+        <a href="#" id="submit-body-part-sizes">
+          <i class="icon f7-icons if-not-md">checkmark</i>
+          <i class="icon material-icons md-only">done</i>
+        </a>
+      </div>
 
       <div class="block">
         <p><b>Track Body Part Sizes</b></p>

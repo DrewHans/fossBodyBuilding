@@ -37,111 +37,102 @@
       </div>
     </div>
 
-    <div class="page-content">
+    <div class="searchbar-backdrop"></div>
 
-      <div class="searchbar-backdrop"></div>
+    <div class="tabs">
 
-      <div class="tabs">
+      <!-- Food Tab Content -->
+      <div class="page-content tab tab-active" id="food-tab">
 
-        <!-- Food Tab Content -->
-        <div class="tab tab-active" id="food-tab">
-
-          <!-- Food Tab Floating Fab Button -->
-          <div class="fab fab-right-bottom">
-            <a href="/foodlibrary/create-food-item/">
-              <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon material-icons md-only">add</i>
-            </a>
-          </div>
-
-          <div class="block">
-
-            <div class="list media-list searchbar-found">
-              <ul>
-
-                <!-- TEMPLATE li element -->
-                <li>
-                  <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">foodItem.foodName</div>
-                        <div class="item-after">foodItem.calories kcals</div>
-                      </div>
-                      <div class="item-subtitle">foodItem.brandName</div>
-                      <div class="item-text">foodItem.servingSize foodItem.servingUnit</div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Chicken Strips</div>
-                        <div class="item-after">120 kcals</div>
-                      </div>
-                      <div class="item-subtitle">Tyson</div>
-                      <div class="item-text">3 ounces</div>
-                    </div>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
+        <!-- Food Tab Floating Fab Button -->
+        <div class="fab fab-right-bottom">
+          <a href="/foodlibrary/create-food-item/">
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon material-icons md-only">add</i>
+          </a>
         </div>
-        <!-- end of Food Tab Content -->
 
-        <!-- Meal Tab Content -->
-        <div class="tab" id="meals-tab">
+        <div class="list media-list searchbar-found">
+          <ul>
 
-          <!-- Meal Tab Floating Fab Button -->
-          <div class="fab fab-right-bottom">
-            <a href="/foodlibrary/create-meal-item/">
-              <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon material-icons md-only">add</i>
-            </a>
-          </div>
+            <!-- TEMPLATE li element -->
+            <li>
+              <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">foodItem.foodName</div>
+                    <div class="item-after">foodItem.calories kcals</div>
+                  </div>
+                  <div class="item-subtitle">foodItem.brandName</div>
+                  <div class="item-text">foodItem.servingSize foodItem.servingUnit</div>
+                </div>
+              </a>
+            </li>
 
-          <div class="block">
+            <li>
+              <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Chicken Strips</div>
+                    <div class="item-after">120 kcals</div>
+                  </div>
+                  <div class="item-subtitle">Tyson</div>
+                  <div class="item-text">3 ounces</div>
+                </div>
+              </a>
+            </li>
 
-            <div class="list media-list searchbar-found">
-              <ul>
-
-                <!-- TEMPLATE li element -->
-                <li>
-                  <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">mealItem.mealName</div>
-                        <div class="item-after">mealItem.calories kcals</div>
-                      </div>
-                      <div class="item-subtitle">mealItem.creatorName</div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
-                        <div class="item-after">690 kcals</div>
-                      </div>
-                      <div class="item-subtitle">Taco Bell</div>
-                    </div>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
+          </ul>
         </div>
-        <!-- end of Meal Tab Content -->
 
       </div>
+      <!-- end of Food Tab Content -->
+
+      <!-- Meal Tab Content -->
+      <div class="page-content tab" id="meals-tab">
+
+        <!-- Meal Tab Floating Fab Button -->
+        <div class="fab fab-right-bottom">
+          <a href="/foodlibrary/create-meal-item/">
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon material-icons md-only">add</i>
+          </a>
+        </div>
+
+        <div class="list media-list searchbar-found">
+          <ul>
+
+            <!-- TEMPLATE li element -->
+            <li>
+              <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">mealItem.mealName</div>
+                    <div class="item-after">mealItem.calories kcals</div>
+                  </div>
+                  <div class="item-subtitle">mealItem.creatorName</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
+                    <div class="item-after">690 kcals</div>
+                  </div>
+                  <div class="item-subtitle">Taco Bell</div>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+      <!-- end of Meal Tab Content -->
+
     </div>
 
   </div>

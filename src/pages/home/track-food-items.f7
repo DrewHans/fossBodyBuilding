@@ -44,120 +44,117 @@
       </a>
     </div>
 
-    <div class="page-content">
+    <div class="searchbar-backdrop"></div>
 
-      <div class="searchbar-backdrop"></div>
+    <div class="tabs">
 
-      <div class="tabs">
+      <!-- Food Tab Content -->
+      <div class="page-content tab tab-active" id="tab-1">
 
-        <!-- Food Tab Content -->
-        <div class="tab tab-active" id="tab-1">
-
-          <!-- Add New Food Item FAB -->
-          <div class="fab fab-left-bottom">
-            <a href="/foodlibrary/create-food-item/" id="create-new-food-item">
-              <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon material-icons md-only">add</i>
-            </a>
-          </div>
-
-          <div class="block">
-
-            <div class="list media-list searchbar-found">
-              <ul>
-
-                <!-- TEMPLATE li element -->
-                <li>
-                  <label class="item-checkbox item-content">
-                    <input type="checkbox" name="food-item-checkbox" value="foodItem.id" />
-                    <i class="icon icon-checkbox"></i>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">foodItem.foodName</div>
-                        <div class="item-after">foodItem.calories kcals</div>
-                      </div>
-                      <div class="item-subtitle">foodItem.brandName</div>
-                      <div class="item-text">foodItem.servingSize foodItem.servingUnit</div>
-                    </div>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="item-checkbox item-content">
-                    <input type="checkbox" name="food-item-checkbox" value="foodItem.id" />
-                    <i class="icon icon-checkbox"></i>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Chicken Strips</div>
-                        <div class="item-after">120 kcals</div>
-                      </div>
-                      <div class="item-subtitle">Tyson</div>
-                      <div class="item-text">3 ounces</div>
-                    </div>
-                  </label>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
+        <!-- Add New Food Item FAB -->
+        <div class="fab fab-left-bottom">
+          <a href="/foodlibrary/create-food-item/" id="create-new-food-item">
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon material-icons md-only">add</i>
+          </a>
         </div>
-        <!-- end of Food Tab Content -->
 
-        <!-- Meal Tab Content -->
-        <div class="tab" id="tab-2">
+        <div class="block">
 
-          <!-- Add New Meal Item FAB -->
-          <div class="fab fab-left-bottom">
-            <a href="/foodlibrary/create-meal-item/" id="create-new-meal-item">
-              <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon material-icons md-only">add</i>
-            </a>
+          <div class="list media-list searchbar-found">
+            <ul>
+
+              <!-- TEMPLATE li element -->
+              <li>
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="food-item-checkbox" value="foodItem.id" />
+                  <i class="icon icon-checkbox"></i>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">foodItem.foodName</div>
+                      <div class="item-after">foodItem.calories kcals</div>
+                    </div>
+                    <div class="item-subtitle">foodItem.brandName</div>
+                    <div class="item-text">foodItem.servingSize foodItem.servingUnit</div>
+                  </div>
+                </label>
+              </li>
+
+              <li>
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="food-item-checkbox" value="foodItem.id" />
+                  <i class="icon icon-checkbox"></i>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">Chicken Strips</div>
+                      <div class="item-after">120 kcals</div>
+                    </div>
+                    <div class="item-subtitle">Tyson</div>
+                    <div class="item-text">3 ounces</div>
+                  </div>
+                </label>
+              </li>
+
+            </ul>
           </div>
 
-          <div class="block">
-
-            <div class="list media-list searchbar-found">
-              <ul>
-
-                <!-- TEMPLATE li element -->
-                <li>
-                  <label class="item-checkbox item-content">
-                    <input type="checkbox" name="meal-item-checkbox" value="mealItem.id" />
-                    <i class="icon icon-checkbox"></i>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">mealItem.foodName</div>
-                        <div class="item-after">mealItem.calories kcals</div>
-                      </div>
-                      <div class="item-subtitle">mealItem.brandName</div>
-                      <div class="item-text">mealItem.servingSize mealItem.servingUnit</div>
-                    </div>
-                  </label>
-                </li>
-
-                <li>
-                  <label class="item-checkbox item-content">
-                    <input type="checkbox" name="meal-item-checkbox" value="mealItem.id" />
-                    <i class="icon icon-checkbox"></i>
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
-                        <div class="item-after">690 kcals</div>
-                      </div>
-                      <div class="item-subtitle">Taco Bell</div>
-                    </div>
-                  </label>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
         </div>
-        <!-- end of Meal Tab Content -->
-
       </div>
+      <!-- end of Food Tab Content -->
+
+      <!-- Meal Tab Content -->
+      <div class="page-content tab" id="tab-2">
+
+        <!-- Add New Meal Item FAB -->
+        <div class="fab fab-left-bottom">
+          <a href="/foodlibrary/create-meal-item/" id="create-new-meal-item">
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon material-icons md-only">add</i>
+          </a>
+        </div>
+
+        <div class="block">
+
+          <div class="list media-list searchbar-found">
+            <ul>
+
+              <!-- TEMPLATE li element -->
+              <li>
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="meal-item-checkbox" value="mealItem.id" />
+                  <i class="icon icon-checkbox"></i>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">mealItem.foodName</div>
+                      <div class="item-after">mealItem.calories kcals</div>
+                    </div>
+                    <div class="item-subtitle">mealItem.brandName</div>
+                    <div class="item-text">mealItem.servingSize mealItem.servingUnit</div>
+                  </div>
+                </label>
+              </li>
+
+              <li>
+                <label class="item-checkbox item-content">
+                  <input type="checkbox" name="meal-item-checkbox" value="mealItem.id" />
+                  <i class="icon icon-checkbox"></i>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
+                      <div class="item-after">690 kcals</div>
+                    </div>
+                    <div class="item-subtitle">Taco Bell</div>
+                  </div>
+                </label>
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+      </div>
+      <!-- end of Meal Tab Content -->
+
     </div>
 
   </div>

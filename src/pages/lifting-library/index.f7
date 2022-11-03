@@ -29,6 +29,7 @@
     <div class="block searchbar-not-found">
       <div class="block-inner">Nothing found</div>
     </div>
+    <div class="searchbar-backdrop"></div>
 
     <div class="toolbar tabbar toolbar-bottom">
       <div class="toolbar-inner">
@@ -37,140 +38,130 @@
       </div>
     </div>
 
-    <div class="page-content">
 
-      <div class="searchbar-backdrop"></div>
+    <div class="tabs">
 
-      <div class="tabs">
+      <!-- Exercise Tab Content -->
+      <div class="page-content tab tab-active" id="exercise-tab">
 
-        <!-- Exercise Tab Content -->
-        <div class="tab tab-active" id="exercise-tab">
-
-          <!-- Exercise Tab Floating Fab Button -->
-          <div class="fab fab-right-bottom">
-            <a href="/liftinglibrary/create-exercise/">
-              <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon material-icons md-only">add</i>
-            </a>
-          </div>
-
-          <div class="block">
-
-            <div class="list media-list searchbar-found">
-              <ul>
-
-                <!-- TEMPLATE li element -->
-                <li>
-                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">exerciseInfo.exerciseName</div>
-                        <div class="item-after">exerciseInfo.exerciseType</div>
-                      </div>
-                      <div class="item-subtitle">exerciseInfo.equipmentRequired</div>
-                      <div class="item-text">exerciseInfo.muscleTargets</div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Bench Press</div>
-                        <div class="item-after">Compound Lift</div>
-                      </div>
-                      <div class="item-subtitle">Barbell</div>
-                      <div class="item-text">Muscle Targets: Pectoral; anterior deltoids; triceps brachii;</div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Single Arm Biceps Curl</div>
-                        <div class="item-after">Isolation Lift</div>
-                      </div>
-                      <div class="item-subtitle">Dumbbell</div>
-                      <div class="item-text">Muscle Targets: biceps brachii;</div>
-                    </div>
-                  </a>
-                </li>
-
-                <li>
-                  <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Pullups</div>
-                        <div class="item-after">Bodyweight Exercise</div>
-                      </div>
-                      <div class="item-subtitle">Pullup bar</div>
-                      <div class="item-text">Muscle Targets: Latissimus dorsi; Teres Major; Trapezius; Pectoralis major;
-                        Biceps;</div>
-                    </div>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
+        <!-- Exercise Tab Floating Fab Button -->
+        <div class="fab fab-right-bottom">
+          <a href="/liftinglibrary/create-exercise/">
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon material-icons md-only">add</i>
+          </a>
         </div>
-        <!-- end of Lifting Tab Content -->
 
-        <!-- Workout Tab Content -->
-        <div class="tab" id="workout-tab">
+        <div class="list media-list searchbar-found">
+          <ul>
 
-          <!-- Workout Tab Floating Fab Button -->
-          <div class="fab fab-right-bottom">
-            <a href="/liftinglibrary/create-workout/">
-              <i class="icon f7-icons if-not-md">plus</i>
-              <i class="icon material-icons md-only">add</i>
-            </a>
-          </div>
+            <!-- TEMPLATE li element -->
+            <li>
+              <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">exerciseInfo.exerciseName</div>
+                    <div class="item-after">exerciseInfo.exerciseType</div>
+                  </div>
+                  <div class="item-subtitle">exerciseInfo.equipmentRequired</div>
+                  <div class="item-text">exerciseInfo.muscleTargets</div>
+                </div>
+              </a>
+            </li>
 
-          <div class="block">
+            <li>
+              <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Bench Press</div>
+                    <div class="item-after">Compound Lift</div>
+                  </div>
+                  <div class="item-subtitle">Barbell</div>
+                  <div class="item-text">Muscle Targets: Pectoral; anterior deltoids; triceps brachii;</div>
+                </div>
+              </a>
+            </li>
 
-            <div class="list media-list searchbar-found">
-              <ul>
+            <li>
+              <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Single Arm Biceps Curl</div>
+                    <div class="item-after">Isolation Lift</div>
+                  </div>
+                  <div class="item-subtitle">Dumbbell</div>
+                  <div class="item-text">Muscle Targets: biceps brachii;</div>
+                </div>
+              </a>
+            </li>
 
-                <!-- TEMPLATE li element -->
-                <li>
-                  <a href="/liftinglibrary/edit-workout/workoutInfo.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">workoutInfo.workoutName</div>
-                        <div class="item-after">workoutInfo.briefDescription</div>
-                      </div>
-                      <div class="item-subtitle">workoutInfo.workoutType</div>
-                      <div class="item-text">Created by workoutInfo.creatorName</div>
-                    </div>
-                  </a>
-                </li>
+            <li>
+              <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Pullups</div>
+                    <div class="item-after">Bodyweight Exercise</div>
+                  </div>
+                  <div class="item-subtitle">Pullup bar</div>
+                  <div class="item-text">Muscle Targets: Latissimus dorsi; Teres Major; Trapezius; Pectoralis major;
+                    Biceps;</div>
+                </div>
+              </a>
+            </li>
 
-                <li>
-                  <a href="/liftinglibrary/edit-workout/workoutInfo.id" class="item-link item-content">
-                    <div class="item-inner">
-                      <div class="item-title-row">
-                        <div class="item-title">Upper Body - Bench Press Focus</div>
-                        <div class="item-after">This workout blah blah blah</div>
-                      </div>
-                      <div class="item-subtitle">Hypertrophy</div>
-                      <div class="item-text">Created by Drew Hans</div>
-                    </div>
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-
-          </div>
+          </ul>
         </div>
-        <!-- end of Workout Tab Content -->
 
       </div>
+      <!-- end of Lifting Tab Content -->
+
+      <!-- Workout Tab Content -->
+      <div class="page-content tab" id="workout-tab">
+
+        <!-- Workout Tab Floating Fab Button -->
+        <div class="fab fab-right-bottom">
+          <a href="/liftinglibrary/create-workout/">
+            <i class="icon f7-icons if-not-md">plus</i>
+            <i class="icon material-icons md-only">add</i>
+          </a>
+        </div>
+
+        <div class="list media-list searchbar-found">
+          <ul>
+
+            <!-- TEMPLATE li element -->
+            <li>
+              <a href="/liftinglibrary/edit-workout/workoutInfo.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">workoutInfo.workoutName</div>
+                    <div class="item-after">workoutInfo.briefDescription</div>
+                  </div>
+                  <div class="item-subtitle">workoutInfo.workoutType</div>
+                  <div class="item-text">Created by workoutInfo.creatorName</div>
+                </div>
+              </a>
+            </li>
+
+            <li>
+              <a href="/liftinglibrary/edit-workout/workoutInfo.id" class="item-link item-content">
+                <div class="item-inner">
+                  <div class="item-title-row">
+                    <div class="item-title">Upper Body - Bench Press Focus</div>
+                    <div class="item-after">This workout blah blah blah</div>
+                  </div>
+                  <div class="item-subtitle">Hypertrophy</div>
+                  <div class="item-text">Created by Drew Hans</div>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+      <!-- end of Workout Tab Content -->
+
     </div>
 
   </div>

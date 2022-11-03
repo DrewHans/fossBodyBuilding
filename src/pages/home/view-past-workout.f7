@@ -9,22 +9,14 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title" id="changableTitle">Track Weight</div>
+        <div class="title" id="changableTitle">Past Workout</div>
       </div>
     </div>
 
     <div class="page-content">
 
-      <!-- Save weight FAB -->
-      <div class="fab fab-right-bottom">
-        <a href="#" id="submit-weight">
-          <i class="icon f7-icons if-not-md">checkmark</i>
-          <i class="icon material-icons md-only">done</i>
-        </a>
-      </div>
-
       <div class="block">
-        <p><b>Track Body Weight</b></p>
+        <p><b>Past Workout Info Goes Here</b></p>
       </div>
     </div>
 
@@ -36,12 +28,6 @@
 
     $on('pageInit', () => {
       // load event functions
-
-      $('#submit-weight').on('click', async () => {
-        console.log("Submit weight FAB was pressed");
-      });
-
-
     });
 
     return $render;
