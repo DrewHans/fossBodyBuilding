@@ -20,7 +20,12 @@ import LiftingLibraryEditWorkoutPage from "../pages/lifting-library/edit-workout
 
 import SettingsIndexPage from "../pages/settings/index.f7";
 import SettingsAppearancePage from "../pages/settings/appearance.f7";
-import SettingsMeasurementUnitsPage from "../pages/settings/measurement-units.f7";
+import SettingsDataExportPage from "../pages/settings/data-export.f7";
+import SettingsDataImportPage from "../pages/settings/data-import.f7";
+import SettingsLanguagePage from "../pages/settings/language.f7";
+import SettingsNutrimentsPage from "../pages/settings/nutriments.f7"
+import SettingsNutritionIntakeTargetsPage from "../pages/settings/nutrition-intake-targets.f7"
+import SettingsPreferredUnitsPage from "../pages/settings/preferred-units.f7";
 
 import StatisticsPage from "../pages/statistics/index.f7";
 
@@ -116,8 +121,33 @@ var routes = [
   },
 
   {
-    path: "/settings/measurement-units/",
-    component: SettingsMeasurementUnitsPage,
+    path: "/settings/data-export/",
+    component: SettingsDataExportPage,
+  },
+
+  {
+    path: "/settings/data-import/",
+    component: SettingsDataImportPage,
+  },
+
+  {
+    path: "/settings/language/",
+    component: SettingsLanguagePage,
+  },
+
+  {
+    path: "/settings/nutriments/",
+    component: SettingsNutrimentsPage,
+  },
+
+  {
+    path: "/settings/nutrition-intake-targets/",
+    component: SettingsNutritionIntakeTargetsPage,
+  },
+  
+  {
+    path: "/settings/preferred-units/",
+    component: SettingsPreferredUnitsPage,
   },
 
   {

@@ -14,14 +14,18 @@
       </div>
     </div>
 
-    <!-- Scrollable page content-->
     <div class="page-content">
 
       <div class="list links-list">
         <ul>
           <li><a href="/settings/appearance/">Appearance</a></li>
-          <li><a href="/settings/measurement-units/">Measurement Units</a></li>
-          <li><a href="#">Link 3</a></li>
+          <li><a href="/settings/language/">Language</a></li>
+          <li><a href="/settings/nutriments/">Nutriments</a></li>
+          <li><a href="/settings/nutrition-intake-targets/">Nutrition Intake Targets</a></li>
+          <li><a href="/settings/preferred-units/">Preferred Units</a></li>
+          <li class="item-divider"></li>
+          <li><a href="/settings/data-import/">Import Data</a></li>
+          <li><a href="/settings/data=export/">Export Data</a></li>
         </ul>
       </div>
 

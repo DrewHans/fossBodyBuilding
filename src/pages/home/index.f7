@@ -1,5 +1,5 @@
 <template>
-  <div class="page page-with-subnavbar" data-name="home">
+  <div class="page" data-name="home">
 
     <div class="navbar">
       <div class="navbar-bg"></div>
@@ -11,18 +11,6 @@
           </a>
         </div>
         <div class="title">FOSS BodyBuilding</div>
-      </div>
-    </div>
-
-    <div class="subnavbar">
-      <div class="subnavbar-inner show-values">
-        <div>
-          <a href="#" class="link icon-only" id="load-previous-day"><i class="icon icon-back"></i></a>
-        </div>
-        <div id="date-displayed"></div>
-        <div>
-          <a href="#" class="link icon-only" id="load-next-day"><i class="icon icon-forward"></i></a>
-        </div>
       </div>
     </div>
 
@@ -41,6 +29,18 @@
         <!-- Nutrition Diary Tab Content -->
         <div class="tab tab-active" id="nutrition-diary-tab">
 
+          <div class="toolbar">
+            <div class="toolbar-inner show-values">
+              <div>
+                <a href="#" class="link icon-only" id="load-previous-day"><i class="icon icon-back"></i></a>
+              </div>
+              <div id="date-displayed"></div>
+              <div>
+                <a href="#" class="link icon-only" id="load-next-day"><i class="icon icon-forward"></i></a>
+              </div>
+            </div>
+          </div>
+
           <!-- Daily Nutrition Stats -->
           <div class="toolbar">
             <div class="toolbar-inner ripple" id="nutrition-stats-toolbar">
@@ -48,23 +48,19 @@
               </div>
               <div class="col">
                 <div class="row">Calories</div>
-                <div class="row" id="energy-stat">2000/3500</div>
+                <div class="row" id="energy-stat">3000/3000</div>
               </div>
               <div class="col">
                 <div class="row">Proteins</div>
-                <div class="row" id="protein-stat">200/300</div>
+                <div class="row" id="protein-stat">210/210</div>
               </div>
               <div class="col">
                 <div class="row">Carbs</div>
-                <div class="row" id="carb-stat">350/500</div>
+                <div class="row" id="carb-stat">360/400</div>
               </div>
               <div class="col">
                 <div class="row">Fats</div>
-                <div class="row" id="fat-stat">40/60</div>
-              </div>
-              <div class="col">
-                <div class="row">Water</div>
-                <div class="row" id="water-stat">3000/4000</div>
+                <div class="row" id="fat-stat">80/80</div>
               </div>
               <div class="col">
               </div>
@@ -80,7 +76,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 1</div>
+                      <div class="item-title">Block 1</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -96,11 +92,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -109,7 +119,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 2</div>
+                      <div class="item-title">Block 2</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -125,11 +135,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -138,7 +162,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 3</div>
+                      <div class="item-title">Block 3</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -154,11 +178,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -167,7 +205,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 4</div>
+                      <div class="item-title">Block 4</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -183,11 +221,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -196,7 +248,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 5</div>
+                      <div class="item-title">Block 5</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -212,11 +264,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -225,7 +291,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 6</div>
+                      <div class="item-title">Block 6</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -241,11 +307,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -254,7 +334,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 7</div>
+                      <div class="item-title">Block 7</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -270,11 +350,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -283,7 +377,7 @@
                 <li class="accordion-item accordion-item-opened">
                   <a href="#" class="item-content item-link">
                     <div class="item-inner">
-                      <div class="item-title">Meal 8</div>
+                      <div class="item-title">Block 8</div>
                     </div>
                   </a>
                   <div class="accordion-item-content">
@@ -299,11 +393,25 @@
                     </div>
                   </div>
                 </li>
-                <li class="accordion-item">
-                  <div class="item-content">
-                    <a href="/track-food-items/">+</a>
+
+                <li class="item-divider">
+                  <div class="item-inner">
+                    <div class="col">
+                      <a href="/track-food-items/">
+                        <i class="icon f7-icons if-not-md">plus</i>
+                        <i class="icon material-icons md-only">add</i>
+                      </a>
+                    </div>
+                    <div class="col">500 kcals</div>
+                    <div class="col"></div>
+                    <div class="col">26g protein</div>
+                    <div class="col"></div>
+                    <div class="col">10g fat</div>
+                    <div class="col"></div>
+                    <div class="col">45g carbs</div>
                   </div>
                 </li>
+
               </ul>
             </div>
 
@@ -326,6 +434,7 @@
         <!-- Body Diary Tab Content -->
         <div class="tab" id="body-diary-tab">
 
+          <div class="block">
           <!-- Track Body Weight / Part Size FAB -->
           <div class="fab-backdrop"></div>
           <div class="fab fab-right-bottom">
@@ -347,8 +456,61 @@
             </div>
           </div>
 
-          <div class="block">
-            <p><b>Body Diary Tab</b></p>
+
+            <div class="row">
+              <canvas id="myChart" width="100" height="100" aria-label="Chart which graphs the last 10 weigh-ins"
+                role="img">
+                <p>Your browser does not support the canvas element.</p>
+              </canvas>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <div class="card-header">
+                    <div></div>
+                    <div>Last Weigh-In</div>
+                    <div></div>
+                  </div>
+                  <div class="card-content card-content-padding">
+                    <p class="text-align-center" style="font-size: 8em">284 lb</p>
+                  </div>
+                  <div class="card-footer">
+                    <div></div>
+                    <div>Tuesday November 01, 2022</div>
+                    <div></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p>Last 7 Weigh-Ins:</p>
+            </div>
+
+            <div>
+              <p>- Weight Average: 285.07 lb (across 7 days)</p>
+            </div>
+
+            <div>
+              <p>- Highest Weight: 287 lb on 10-28</p>
+            </div>
+
+            <div>
+              <p>- Lowest Weight: 283 lb on 10-30</p>
+            </div>
+
+            <div>
+              <p>- Delta (from average): -1.07 lb</p>
+            </div>
+
+            <div>
+              <p>- Delta (from highest): -3 lb from 10-28</p>
+            </div>
+
+            <div>
+              <p>- Delta (from lowest): +1 lb from 10-30</p>
+            </div>
 
           </div>
         </div>
@@ -364,6 +526,74 @@
   export default (props, { $, $on, $f7 }) => {
 
     $on('pageInit', () => {
+
+      // init body weight chart
+      const data = {
+        datasets: [{
+          label: 'Weight Change',
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          borderColor: 'rgba(54, 162, 235, 0.5)',
+          borderWidth: 4,
+          spanGaps: true,
+          lineTension: 0.25,
+          data: [
+            { x: '10-23', y: 287.0 },
+            { x: '10-25', y: 284.5 },
+            { x: '10-26', y: 285 },
+            { x: '10-28', y: 287 },
+            { x: '10-29', y: 285 },
+            { x: '10-30', y: 283 },
+            { x: '11-01', y: 284 }
+          ]
+        }]
+      };
+
+      const options = {
+        responsive: true,
+        plugins: {
+          tooltip: {
+            mode: 'index',
+            intersect: false
+          },
+          title: {
+            display: false,
+            text: 'Weight Change Over Time'
+          }
+        },
+        hover: {
+          mode: 'index',
+          intersec: false
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Date ( last 7 weigh-ins )'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Weight ( lb )'
+            },
+            ticks: {
+              stepSize: 0.5
+            }
+          }
+        }
+      };
+
+      const config = {
+        type: 'line',
+        data: data,
+        options: options
+      };
+
+      const myChart = new Chart(
+        document.getElementById('myChart'),
+        config
+      );
+
       const clearDiaryRecords = () => {
         // TODO: clear diary
       };

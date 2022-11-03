@@ -13,66 +13,11 @@
       </div>
     </div>
 
-    <!-- Scrollable page content-->
     <div class="page-content">
-
-      <div class="list">
-        <ul>
-
-          <li class="accordion-item accordion-item-opened">
-            <a href="#" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">Metadata</div>
-              </div>
-            </a>
-            <div class="accordion-item-content">
-              <div class="block"><p>Name</p></div>
-              <div class="block"><p>Brand</p></div>
-              <div class="block"><p>Serving Size</p></div>
-              <div class="block"><p>Serving Units</p></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="list">
-        <ul>
-
-          <li class="accordion-item accordion-item-opened">
-            <a href="#" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">Energy, Water, & Macronutrients</div>
-              </div>
-            </a>
-            <div class="accordion-item-content">
-              <!-- TODO: replace with editable elements -->
-              <div class="block"><p>Calories (kcal)</p></div>
-              <div class="block"><p>Carbs (grams)</p></div>
-              <div class="block"><p>Fat (grams)</p></div>
-              <div class="block"><p>Protein (grams)</p></div>
-              <div class="block"><p>Water (ml)</p></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="list">
-        <ul>
-
-          <li class="accordion-item">
-            <a href="#" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">Micronutrients</div>
-              </div>
-            </a>
-            <div class="accordion-item-content">
-              <div class="block"><p>TODO: micronutrient fields go here</p></div>
-              <div class="block"><p></p></div>
-            </div>
-          </li>
-
-        </ul>
-      </div>
+      <p>Hi, you made it to the add new workout page!</p>
 
     </div>
+
   </div>
 </template>
 

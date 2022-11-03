@@ -14,47 +14,13 @@
       </div>
     </div>
 
-    <div class="toolbar tabbar toolbar-bottom">
-      <div class="toolbar-inner">
-        <a href="#nutrition-stats-tab" class="tab-link tab-link-active">Nutrition Stats</a>
-        <a href="#training-stats-tab" class="tab-link">Training Stats</a>
-        <a href="#body-stats-tab" class="tab-link">Body Stats</a>
-      </div>
-    </div>
-
     <div class="page-content">
+      <div class="block">
 
-      <div class="tabs">
-
-        <!-- Nutrition Stats Tab Content -->
-        <div class="tab tab-active" id="nutrition-stats-tab">
-
-          <div class="block">
-            <p><b>Nutrition Stats Tab</b></p>
-
-          </div>
-        </div>
-        <!-- end of Nutrition Stats Tab Content -->
-
-        <!-- Training Stats Tab Content -->
-        <div class="tab" id="training-stats-tab">
-
-          <div class="block">
-            <p><b>Training Stats Tab</b></p>
-
-          </div>
-        </div>
-        <!-- end of Training Stats Tab Content -->
-
-        <!-- Body Stats Tab Content -->
-        <div class="tab" id="body-stats-tab">
-
-          <div class="block">
-            <p><b>Body Stats Tab</b></p>
-
-          </div>
-        </div>
-        <!-- end of Body Stats Tab Content -->
+        <canvas id="myStatisticsChart" width="100" height="100" aria-label="Chart which graphs statistics"
+        role="img">
+        <p>Your browser does not support the canvas element.</p>
+      </canvas>
 
       </div>
 
@@ -65,6 +31,50 @@
 <script>
   export default (props, { $, $on, $f7 }) => {
     $on('pageInit', () => {
+
+      const data = {
+        datasets: [{
+          label: 'Weight Change',
+          backgroundColor: 'rgba(54, 162, 235, 0.5)',
+          borderColor: 'rgba(54, 162, 235, 0.5)',
+          borderWidth: 2,
+          spanGaps: true,
+          lineTension: 0.2,
+          data: [
+            { x: '10-23', y: 282 },
+            { x: '10-24', y: 282 },
+            { x: '10-25', y: 290 },
+            { x: '10-26', y: 291 },
+            { x: '10-27', y: 291 },
+            { x: '10-28', y: 292 },
+            { x: '10-29', y: 285 },
+            { x: '10-30', y: 287 },
+            { x: '10-31', y: 290 },
+            { x: '11-01', y: 288 }
+          ]
+        }]
+      };
+
+      const options = {
+        scales: {
+          myScale: {
+            type: 'linear',
+            position: 'left',
+          }
+        }
+      };
+
+      const config = {
+        type: 'line',
+        data: data,
+        options: options
+      };
+
+      const myChart = new Chart(
+        document.getElementById('myStatisticsChart'),
+        config
+      );
+
     });
 
     return $render;

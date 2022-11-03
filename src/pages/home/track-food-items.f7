@@ -55,7 +55,7 @@
 
           <!-- Add New Food Item FAB -->
           <div class="fab fab-left-bottom">
-            <a href="#" id="create-new-food-item">
+            <a href="/foodlibrary/create-food-item/" id="create-new-food-item">
               <i class="icon f7-icons if-not-md">plus</i>
               <i class="icon material-icons md-only">add</i>
             </a>
@@ -109,7 +109,7 @@
 
           <!-- Add New Meal Item FAB -->
           <div class="fab fab-left-bottom">
-            <a href="#" id="create-new-meal-item">
+            <a href="/foodlibrary/create-meal-item/" id="create-new-meal-item">
               <i class="icon f7-icons if-not-md">plus</i>
               <i class="icon material-icons md-only">add</i>
             </a>
