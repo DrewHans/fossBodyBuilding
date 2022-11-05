@@ -60,7 +60,7 @@
               <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">foodItem.foodName</div>
+                    <div class="item-title-wrap">foodItem.foodName</div>
                     <div class="item-after">foodItem.calories kcals</div>
                   </div>
                   <div class="item-subtitle">foodItem.brandName</div>
@@ -73,7 +73,7 @@
               <a href="/foodlibrary/edit-food-item/foodItem.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">Chicken Strips</div>
+                    <div class="item-title-wrap">Chicken Strips</div>
                     <div class="item-after">120 kcals</div>
                   </div>
                   <div class="item-subtitle">Tyson</div>
@@ -107,7 +107,7 @@
               <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">mealItem.mealName</div>
+                    <div class="item-title-wrap">mealItem.mealName</div>
                     <div class="item-after">mealItem.calories kcals</div>
                   </div>
                   <div class="item-subtitle">mealItem.creatorName</div>
@@ -119,7 +119,7 @@
               <a href="/foodlibrary/edit-meal-item/mealItem.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
+                    <div class="item-title-wrap">Chicken Quesadilla Combo w/o Drink</div>
                     <div class="item-after">690 kcals</div>
                   </div>
                   <div class="item-subtitle">Taco Bell</div>

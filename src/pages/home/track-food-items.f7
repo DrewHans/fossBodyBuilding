@@ -71,7 +71,7 @@
                   <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
-                      <div class="item-title">foodItem.foodName</div>
+                      <div class="item-title-wrap">foodItem.foodName</div>
                       <div class="item-after">foodItem.calories kcals</div>
                     </div>
                     <div class="item-subtitle">foodItem.brandName</div>
@@ -86,7 +86,7 @@
                   <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
-                      <div class="item-title">Chicken Strips</div>
+                      <div class="item-title-wrap">Chicken Strips</div>
                       <div class="item-after">120 kcals</div>
                     </div>
                     <div class="item-subtitle">Tyson</div>
@@ -125,7 +125,7 @@
                   <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
-                      <div class="item-title">mealItem.foodName</div>
+                      <div class="item-title-wrap">mealItem.foodName</div>
                       <div class="item-after">mealItem.calories kcals</div>
                     </div>
                     <div class="item-subtitle">mealItem.brandName</div>
@@ -140,7 +140,7 @@
                   <i class="icon icon-checkbox"></i>
                   <div class="item-inner">
                     <div class="item-title-row">
-                      <div class="item-title">Chicken Quesadilla Combo w/o Drink</div>
+                      <div class="item-title-wrap">Chicken Quesadilla Combo w/o Drink</div>
                       <div class="item-after">690 kcals</div>
                     </div>
                     <div class="item-subtitle">Taco Bell</div>

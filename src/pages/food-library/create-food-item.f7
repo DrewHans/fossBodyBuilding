@@ -14,63 +14,825 @@
     </div>
 
     <div class="page-content">
+      <div class="block">
 
-      <div class="list">
-        <ul>
+        <!-- Metadata Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Food Metadata</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
 
-          <li class="accordion-item accordion-item-opened">
-            <a href="#" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">Metadata</div>
+                <div class="list no-hairlines-md">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Food Name</div>
+                        <div class="item-input-wrap">
+                          <textarea class="resizable" required validate
+                            data-error-message="Error: must not be empty"></textarea>
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Brand Name</div>
+                        <div class="item-input-wrap">
+                          <textarea class="resizable"></textarea>
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-content item-input item-input-outline">
+                            <div class="item-inner">
+                              <div class="item-title item-floating-label">Serving Size</div>
+                              <div class="item-input-wrap">
+                                <input type="text" placeholder="Enter number" required validate pattern="[0-9]*"
+                                  data-error-message="Error: must be a number" />
+                                <span class="input-clear-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="item-content item-input item-input-outline">
+                            <div class="item-inner">
+                              <div class="item-title item-floating-label">Serving Unit</div>
+                              <div class="item-input-wrap">
+                                <input type="text" required validate data-error-message="Error: must not be empty" />
+                                <span class="input-clear-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
               </div>
-            </a>
-            <div class="accordion-item-content">
-              <div class="block"><p>Name</p></div>
-              <div class="block"><p>Brand</p></div>
-              <div class="block"><p>Serving Size</p></div>
-              <div class="block"><p>Serving Units</p></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="list">
-        <ul>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Metadata Accordion -->
 
-          <li class="accordion-item accordion-item-opened">
-            <a href="#" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">Energy, Water, & Macronutrients</div>
+        <!-- Tags Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-closed">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Food Tags</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list no-hairlines-md">
+                  <ul>
+
+                    <li>
+                      <div class="row">
+                        <div class="col">
+                          <ul>
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="alcohol" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Alcohol</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="beverage" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Beverage</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="caffeine" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Caffeine</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="dairy" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Dairy</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="fish" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Fish</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="fruit" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Fruit</div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col">
+                          <ul>
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="grain" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Grain</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="meat" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Meat</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="medicine-supplement" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Medicine/Supplement</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="oil-solid-fats" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Oils/Solid-Fats</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="poultry" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Poultry</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="vegetable" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Vegetable</div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
               </div>
-            </a>
-            <div class="accordion-item-content">
-              <!-- TODO: replace with editable elements -->
-              <div class="block"><p>Calories (kcal)</p></div>
-              <div class="block"><p>Carbs (grams)</p></div>
-              <div class="block"><p>Fat (grams)</p></div>
-              <div class="block"><p>Protein (grams)</p></div>
-              <div class="block"><p>Water (ml)</p></div>
-            </div>
-          </li>
-        </ul>
-      </div>
-      <div class="list">
-        <ul>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Tags Accordion -->
 
-          <li class="accordion-item">
-            <a href="#" class="item-content item-link">
-              <div class="item-inner">
-                <div class="item-title">Micronutrients</div>
+        <!-- Energy Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Food Energy</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list no-hairlines-md">
+                  <ul>
+
+                    <li>
+                      <div class="row">
+                        <div class="col">
+                          <div class="item-content item-input item-input-outline">
+                            <div class="item-inner">
+                              <div class="item-title item-floating-label">Calories (kcal)</div>
+                              <div class="item-input-wrap">
+                                <input type="number" placeholder="0" pattern="[0-9]*" />
+                                <span class="input-clear-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col">
+                          <div class="item-content item-input item-input-outline">
+                            <div class="item-inner">
+                              <div class="item-title item-floating-label">Kilojoules (kJ)</div>
+                              <div class="item-input-wrap">
+                                <input type="number" placeholder="0" pattern="[0-9]*" />
+                                <span class="input-clear-button"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
               </div>
-            </a>
-            <div class="accordion-item-content">
-              <div class="block"><p>TODO: micronutrient fields go here</p></div>
-              <div class="block"><p></p></div>
-            </div>
-          </li>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Energy Accordion -->
 
-        </ul>
+        <!-- Common Nutrition Information Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Common Nutrition Information</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list inset">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Total Fat (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Saturated Fat (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Trans Fat (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Polyunsaturated Fat (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Monounsaturated Fat (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Cholesterol (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Sodium (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Total Carbohydrate (g)
+                        </div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Dietary Fiber (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Soluble Fiber (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Total Sugars (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Added Sugars (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Protein (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin D (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Calcium (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Iron (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Potassium (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Common Nutrition Information Accordion -->
+
+        <!-- Additional Vitamins & Minerals Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-closed">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Additional Vitamins & Minerals</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list inset">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin A (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin C (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin E (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin K (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Thiamin (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Riboflavin (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Niacin (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin B6 (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Folate (mcg DFE)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Folic Acid (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin B12 (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Biotin (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Pantothenic Acid (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Phosphorus (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Iodine (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Magnesium (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Zinc (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Selenium (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Copper (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Manganese (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Chromium (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Molybdenum (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Chloride (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Silicon (mg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vanadium (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Lutein (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Lycopene (mcg)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Additional Vitamins & Minerals Accordion -->
+
+        <!-- User Created Nutriments Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-closed">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">User Created Nutriments</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list inset">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Creatine Monohydrate (g)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" placeholder="0" pattern="[0-9]*" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of User Created Nutriments Accordion -->
+
       </div>
-
     </div>
   </div>
 </template>

@@ -16,7 +16,7 @@
 
     <div class="toolbar tabbar toolbar-bottom">
       <div class="toolbar-inner">
-        <a href="#body-comp-tab" class="tab-link">Body Composition</a>
+        <a href="#body-tab" class="tab-link">Body</a>
         <a href="#nutrition-tab" class="tab-link tab-link-active">Nutrition</a>
         <a href="#training-tab" class="tab-link">Training</a>
       </div>
@@ -49,8 +49,8 @@
     <div class="tabs-animated-wrap">
       <div class="tabs">
 
-        <!-- Body Composition Tab Content -->
-        <div class="page-content tab" id="body-comp-tab">
+        <!-- Body Tab Content -->
+        <div class="page-content tab" id="body-tab">
 
           <div class="block">
 
@@ -132,7 +132,7 @@
           <div class="row margin-bottom"></div>
 
         </div>
-        <!-- end of Body Composition Tab Content -->
+        <!-- end of Body Tab Content -->
 
         <!-- Nutrition Tab Content -->
         <div class="page-content tab tab-active" id="nutrition-tab">
@@ -543,7 +543,7 @@
                   <a href="/view-past-workout/workoutid" class="item-link item-content">
                     <div class="item-inner">
                       <div class="item-title-row">
-                        <div class="item-title">Upper Body Hypertrophy - Back Focus</div>
+                        <div class="item-title-wrap">Upper Body Hypertrophy - Back Focus</div>
                         <div class="item-after">56 min</div>
                       </div>
                       <div class="item-subtitle">Fri Nov 04, 2022 09:45 AM</div>
@@ -555,7 +555,7 @@
                   <a href="/view-past-workout/workoutid" class="item-link item-content">
                     <div class="item-inner">
                       <div class="item-title-row">
-                        <div class="item-title">Lower Body Hypertrophy - Squat Focus</div>
+                        <div class="item-title-wrap">Lower Body Hypertrophy - Squat Focus</div>
                         <div class="item-after">45 min</div>
                       </div>
                       <div class="item-subtitle">Thu Nov 03, 2022 09:45 AM</div>
@@ -567,7 +567,7 @@
                   <a href="/view-past-workout/workoutid" class="item-link item-content">
                     <div class="item-inner">
                       <div class="item-title-row">
-                        <div class="item-title">Upper Body Hypertrophy - Chest Focus</div>
+                        <div class="item-title-wrap">Upper Body Hypertrophy - Chest Focus</div>
                         <div class="item-after">52 min</div>
                       </div>
                       <div class="item-subtitle">Tue Nov 01, 2022 09:45 AM</div>
@@ -579,7 +579,7 @@
                   <a href="/view-past-workout/workoutid" class="item-link item-content">
                     <div class="item-inner">
                       <div class="item-title-row">
-                        <div class="item-title">Lower Body Hypertrophy - RDL Focus</div>
+                        <div class="item-title-wrap">Lower Body Hypertrophy - RDL Focus</div>
                         <div class="item-after">58 min</div>
                       </div>
                       <div class="item-subtitle">Mon Oct 31, 2022 09:45 AM</div>
@@ -591,7 +591,7 @@
                   <a href="/view-past-workout/workoutid" class="item-link item-content">
                     <div class="item-inner">
                       <div class="item-title-row">
-                        <div class="item-title">Free Workout</div>
+                        <div class="item-title-wrap">Free Workout</div>
                         <div class="item-after">32 min</div>
                       </div>
                       <div class="item-subtitle">Sun Oct 30, 2022 01:45 PM</div>
@@ -759,7 +759,7 @@
         // water-stat
       });
 
-      $('#body-comp-tab').on('tab:show', async () => {
+      $('#body-tab').on('tab:show', async () => {
         console.log("tab show event fired")
 
         setTimeout(() => {
@@ -769,7 +769,7 @@
 
       });
 
-      $('#body-comp-tab').on('tab:hide', async () => {
+      $('#body-tab').on('tab:hide', async () => {
         console.log("tab hide event fired")
         const fabElement = document.getElementById("track-body-weight-fab")
         fabElement.hidden = true;

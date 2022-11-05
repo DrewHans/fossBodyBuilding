@@ -60,7 +60,7 @@
               <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">exerciseInfo.exerciseName</div>
+                    <div class="item-title-wrap">exerciseInfo.exerciseName</div>
                     <div class="item-after">exerciseInfo.exerciseType</div>
                   </div>
                   <div class="item-subtitle">exerciseInfo.equipmentRequired</div>
@@ -73,7 +73,7 @@
               <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">Bench Press</div>
+                    <div class="item-title-wrap">Bench Press</div>
                     <div class="item-after">Compound Lift</div>
                   </div>
                   <div class="item-subtitle">Barbell</div>
@@ -86,7 +86,7 @@
               <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">Single Arm Biceps Curl</div>
+                    <div class="item-title-wrap">Single Arm Biceps Curl</div>
                     <div class="item-after">Isolation Lift</div>
                   </div>
                   <div class="item-subtitle">Dumbbell</div>
@@ -99,7 +99,7 @@
               <a href="/liftinglibrary/edit-exercise/exerciseInfo.id" class="item-link item-content">
                 <div class="item-inner">
                   <div class="item-title-row">
-                    <div class="item-title">Pullups</div>
+                    <div class="item-title-wrap">Pullups</div>
                     <div class="item-after">Bodyweight Exercise</div>
                   </div>
                   <div class="item-subtitle">Pullup bar</div>
