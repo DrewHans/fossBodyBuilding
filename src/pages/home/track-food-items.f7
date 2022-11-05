@@ -9,7 +9,7 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title" id="changableTitle">Select Items To Add</div>
+        <div class="title">Select Items To Add</div>
       </div>
     </div>
 

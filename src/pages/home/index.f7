@@ -22,11 +22,11 @@
       </div>
     </div>
 
+    <div class="fab-backdrop"></div>
 
     <!-- Track Body Weight / Part Size FAB -->
     <!-- needs to be outside of tabs for scroll to work correctly -->
     <!-- is hidden / shown via javascript events -->
-    <div class="fab-backdrop"></div>
     <div class="fab fab-right-bottom margin-right-half" id="track-body-weight-fab" hidden>
       <a href="#">
         <i class="icon f7-icons if-not-md">plus</i>
@@ -44,6 +44,16 @@
           <span class="fab-label">Track Body Part Size</span>
         </a>
       </div>
+    </div>
+
+    <!-- Track Workout FAB -->
+    <!-- needs to be outside of tabs for scroll to work correctly -->
+    <!-- is hidden / shown via javascript events -->
+    <div class="fab fab-right-bottom margin-right-half" id="track-workout-fab" hidden>
+      <a href="/track-workout/">
+        <i class="icon f7-icons if-not-md">plus</i>
+        <i class="icon material-icons md-only">add</i>
+      </a>
     </div>
 
     <div class="tabs-animated-wrap">
@@ -755,18 +765,26 @@
       });
 
       $('#body-tab').on('tab:show', async () => {
-        console.log("tab show event fired")
-
         setTimeout(() => {
           const fabElement = document.getElementById("track-body-weight-fab")
           fabElement.hidden = false;
         }, 300)
-
       });
 
       $('#body-tab').on('tab:hide', async () => {
-        console.log("tab hide event fired")
         const fabElement = document.getElementById("track-body-weight-fab")
+        fabElement.hidden = true;
+      });
+
+      $('#training-tab').on('tab:show', async () => {
+        setTimeout(() => {
+          const fabElement = document.getElementById("track-workout-fab")
+          fabElement.hidden = false;
+        }, 300)
+      });
+
+      $('#training-tab').on('tab:hide', async () => {
+        const fabElement = document.getElementById("track-workout-fab")
         fabElement.hidden = true;
       });
 

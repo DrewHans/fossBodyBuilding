@@ -9,7 +9,7 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title" id="changableTitle">Track Body Part Sizes</div>
+        <div class="title">Track Body Part Sizes</div>
       </div>
     </div>
 

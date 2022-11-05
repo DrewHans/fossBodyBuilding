@@ -9,7 +9,7 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title" id="changableTitle">Track Weight</div>
+        <div class="title">Track Weight</div>
       </div>
     </div>
 

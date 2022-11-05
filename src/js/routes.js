@@ -6,6 +6,7 @@ import NutritionStatsPage from "../pages/home/nutrition-stats.f7";
 import TrackFoodItemsPage from "../pages/home/track-food-items.f7";
 import TrackBodyPartSizesPage from "../pages/home/track-body-part-sizes.f7";
 import TrackBodyWeightPage from "../pages/home/track-body-weight.f7";
+import TrackWorkoutPage from "../pages/home/track-workout.f7"
 
 import ViewPastWorkoutPage from "../pages/home/view-past-workout.f7";
 
@@ -161,6 +162,11 @@ var routes = [
   {
     path: "/track-food-items/",
     component: TrackFoodItemsPage,
+  },
+
+  {
+    path: "/track-workout/",
+    component: TrackWorkoutPage,
   },
 
   {

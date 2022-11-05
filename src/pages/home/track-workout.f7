@@ -9,14 +9,14 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title">Past Workout</div>
+        <div class="title">Track Workout</div>
       </div>
     </div>
 
     <div class="page-content">
 
       <div class="block">
-        <p><b>Past Workout Info Goes Here</b></p>
+        <p><b>Track Workout page!</b></p>
       </div>
     </div>
 
@@ -28,6 +28,7 @@
 
     $on('pageInit', () => {
       // load event functions
+
     });
 
     return $render;
