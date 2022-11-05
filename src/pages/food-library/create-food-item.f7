@@ -860,7 +860,7 @@
 
       // load event functions
 
-      $('#saveFoodDetailsButton').on('click', async () => {
+      $('#save-food-item').on('click', async () => {
         // collect food data
         // save food data to db
         // return to previous page

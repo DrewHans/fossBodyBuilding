@@ -1,5 +1,6 @@
 <template>
   <div class="page" data-name="about">
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
@@ -13,8 +14,301 @@
       </div>
     </div>
 
+    <!-- Save exercise item FAB -->
+    <div class="fab fab-right-bottom margin-right-half">
+      <a href="#" id="save-exercise">
+        <i class="icon f7-icons if-not-md">checkmark</i>
+        <i class="icon material-icons md-only">done</i>
+      </a>
+    </div>
+
     <div class="page-content">
-      <p>Hi, you made it to the add new exercise page!</p>
+      <div class="block">
+
+        <!-- Metadata Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Exercise Metadata</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list no-hairlines-md">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Exercise Name</div>
+                        <div class="item-input-wrap">
+                          <textarea class="resizable" required validate
+                            data-error-message="Error: must not be empty"></textarea>
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Description (optional)</div>
+                        <div class="item-input-wrap">
+                          <textarea class="resizable"></textarea>
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Metadata Accordion -->
+
+
+        <!-- Required Equipment Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Required Equipment</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-input-wrap">
+                          <select name="equipment">
+                            <option value="none" selected="selected">None</option>
+                            <option disabled>─────────────────────────</option>
+                            <option disabled>BARBELLS:</option>
+                            <option value="standard-barbell">Standard Barbell</option>
+                            <option value="olympic-barbell">Olympic Barbell</option>
+                            <option value="deadlift-barbell">Deadlift (flex) Barbell</option>
+                            <option value="powerlifting-barbell">Powerlifting (rigid) Barbell</option>
+                            <option value="ez-curl-bar">EZ Curl Bar</option>
+                            <option value="hex-trap-bar">Hex-Trap Bar</option>
+                            <option value="log-bar">Log Bar</option>
+                            <option value="swiss-bar">Swiss Bar</option>
+                            <option value="safety-squat-bar">Safety Squat Bar</option>
+                            <option disabled>─────────────────────────</option>
+                            <option disabled>ONE-HANDED-WEIGHTS:</option>
+                            <option value="dumbbell">Dumbbell</option>
+                            <option value="kettlebell">Kettlebell</option>
+                            <option disabled>─────────────────────────</option>
+                            <option disabled>MACHINES & STATIONS:</option>
+                            <option value="cable-machine">Cable Machine</option>
+                            <option value="dip-station">Dip Station</option>
+                            <option value="hyper-extension-bench">Hyper Extension Bench</option>
+                            <option value="inversion-table">Inversion Table</option>
+                            <option value="pullup-bar">Pullup Bar</option>
+                            <option value="roman-chair">Roman Chair</option>
+                            <option value="smith-machine">Smith Machine</option>
+                            <option value="vertical-knee-raise-station">Vertical Knee Raise Station</option>
+                            <option disabled>─────────────────────────</option>
+                            <option disabled>MISC:</option>
+                            <option value="ab-roller">Ab-Roller</option>
+                            <option value="ankle-weights">Ankle Weights</option>
+                            <option value="battle-rope">Battle Rope</option>
+                            <option value="jump-rope">Jump Rope</option>
+                            <option value="medicine-ball">Medicine Ball</option>
+                            <option value="plyometric-box">Plyometric Box</option>
+                            <option value="resistance-band">Resistance Band</option>
+                            <option value="sandbag">Sandbag</option>
+                            <option value="trx-strap">TRX-Strap</option>
+                            <option value="weight-plate">Weight Plate</option>
+                            <option value="weight-vest">Weight Vest</option>
+                            <option value="wrist-weights">Wrist Weights</option>
+                            <option disabled>─────────────────────────</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Required Equipment Accordion -->
+
+        <!-- Muscle Targets Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Muscle Targets</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list no-hairlines-md">
+                  <ul>
+
+                    <li>
+                      <div class="row">
+                        <div class="col">
+                          <ul>
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="chest" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Chest</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="shoulders" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Shoulders</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="biceps" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Biceps</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="triceps" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Triceps</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="forearms" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Forearms</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="abs" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Abs</div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col">
+                          <ul>
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="upper-back" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Upper Back</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="lower-back" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Lower Back</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="glutes" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Glutes</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="quads" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Quads</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="hamstrings" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Hamstrings</div>
+                                </div>
+                              </label>
+                            </li>
+
+                            <li>
+                              <label class="item-checkbox item-content">
+                                <input type="checkbox" id="calves" />
+                                <i class="icon icon-checkbox"></i>
+                                <div class="item-inner">
+                                  <div class="item-title">Calves</div>
+                                </div>
+                              </label>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Muscle Targets Accordion -->
+
+      </div>
+
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
 
     </div>
   </div>
@@ -28,7 +322,7 @@
 
       // load event functions
 
-      $('#saveExerciseDetailsButton').on('click', async () => {
+      $('#save-exercise').on('click', async () => {
         // collect exercise data
         // save exercise data to db
         // return to previous page
