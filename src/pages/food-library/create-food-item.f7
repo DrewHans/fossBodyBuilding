@@ -1,5 +1,6 @@
 <template>
   <div class="page" data-name="about">
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
@@ -11,6 +12,14 @@
         </div>
         <div class="title">Add New Food Item</div>
       </div>
+    </div>
+
+    <!-- Save food item FAB -->
+    <div class="fab fab-right-bottom margin-right-half">
+      <a href="#" id="save-food-item">
+        <i class="icon f7-icons if-not-md">checkmark</i>
+        <i class="icon material-icons md-only">done</i>
+      </a>
     </div>
 
     <div class="page-content">
@@ -833,6 +842,12 @@
         <!-- End of User Created Nutriments Accordion -->
 
       </div>
+
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+
     </div>
   </div>
 </template>
