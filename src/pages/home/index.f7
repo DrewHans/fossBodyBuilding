@@ -150,32 +150,32 @@
           </div>
 
           <!-- Daily Nutrition Stats -->
-          <div class="toolbar">
-            <div class="toolbar-inner ripple" id="nutrition-stats-toolbar">
-              <div class="col">
-              </div>
-              <div class="col">
-                <div class="row">Calories</div>
-                <div class="row" id="energy-stat">3000/3000</div>
-              </div>
-              <div class="col">
-                <div class="row">Proteins</div>
-                <div class="row" id="protein-stat">210/210</div>
-              </div>
-              <div class="col">
-                <div class="row">Carbs</div>
-                <div class="row" id="carb-stat">360/400</div>
-              </div>
-              <div class="col">
-                <div class="row">Fats</div>
-                <div class="row" id="fat-stat">80/80</div>
-              </div>
-              <div class="col">
+          <a href="/nutrition-stats/:dateSelected" id="nutrition-stat-anchor">
+            <div class="toolbar">
+              <div class="toolbar-inner ripple" id="nutrition-stats-toolbar">
+                <div class="col">
+                </div>
+                <div class="col">
+                  <div class="row">Calories</div>
+                  <div class="row" id="energy-stat">3000/3000</div>
+                </div>
+                <div class="col">
+                  <div class="row">Proteins</div>
+                  <div class="row" id="protein-stat">210/210</div>
+                </div>
+                <div class="col">
+                  <div class="row">Carbs</div>
+                  <div class="row" id="carb-stat">360/400</div>
+                </div>
+                <div class="col">
+                  <div class="row">Fats</div>
+                  <div class="row" id="fat-stat">80/80</div>
+                </div>
+                <div class="col">
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- TEST CODE BELOW -->
+          </a>
 
           <div class="block">
 
@@ -523,8 +523,6 @@
               </ul>
             </div>
 
-            <!-- TEST CODE ABOVE -->
-
           </div>
         </div>
         <!-- end of Nutrition Tab Content -->
@@ -614,6 +612,7 @@
 
 <script>
   export default (props, { $, $on, $f7 }) => {
+    var dateSelected;
 
     $on('pageInit', () => {
 
@@ -702,17 +701,23 @@
       };
 
       const updateDateDisplayed = (newDate) => {
+        const dateDiv = document.getElementById("date-displayed");
         dateDiv.innerHTML = newDate.toDateString();
         dateSelected = newDate;
+
+        const nutritionStatAnchor = document.getElementById("nutrition-stat-anchor");
+        nutritionStatAnchor.href = `/nutrition-stats/${dateSelected.toDateString()}`;
       };
 
       const updateNutritionStats = () => { };
 
       const dateToday = new Date();
-      var dateSelected = dateToday;
+      dateSelected = dateToday;
 
-      const dateDiv = document.getElementById("date-displayed");
-      dateDiv.innerHTML = dateToday.toDateString();
+      document.getElementById("date-displayed").innerHTML = dateToday.toDateString();
+
+      const nutritionStatAnchor = document.getElementById("nutrition-stat-anchor");
+      nutritionStatAnchor.href = `/nutrition-stats/${dateSelected.toDateString()}`;
 
       const datePicker = $f7.calendar.create({
         inputEl: '#date-displayed',
@@ -747,16 +752,6 @@
         updateDateDisplayed(nextDate);
         clearRecords();
         loadRecords(nextDate);
-      });
-
-      $('#nutrition-stats-toolbar').on('click', async () => {
-        console.log("hi")
-        // TODO update elements (toggle intake vs remaining stat) with ids:
-        // energy-stat
-        // protein-stat
-        // carb-stat
-        // fat-stat
-        // water-stat
       });
 
       $('#body-tab').on('tab:show', async () => {

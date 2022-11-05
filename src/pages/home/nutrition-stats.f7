@@ -1,0 +1,154 @@
+<template>
+  <div class="page" data-name="about">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div>
+        <div class="title">Nutrition Stats for ${dateSelected}</div>
+      </div>
+    </div>
+
+    <div class="page-content">
+
+      <div class="card">
+        <div class="card-content card-content-padding">
+          <div class="block block-strong">
+            <div class="row">
+              <div class="col-50 text-align-left">Field</div>
+              <div class="col-25 text-align-right">Goal Amount</div>
+              <div class="col-25 text-align-right">Actual Intake</div>
+            </div>
+          </div>
+
+          <div class="row margin-bottom"></div>
+          <div class="row margin-bottom"></div>
+
+          <div class="row">
+            <div class="col-50 text-align-left" style="font-weight: bold;">Calories (kcal)</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">2800</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">3000</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left" style="font-weight: bold;">Joules (kJ)</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">11715</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">12552</div>
+          </div>
+          <div class="row margin-bottom"></div>
+          <div class="row">
+            <div class="col-50 text-align-left" style="font-weight: bold;">Total Fat (g)</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">65</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">80</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Saturated Fat (g)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">25</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Trans Fat (g)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">10</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Polyunsaturated Fat (g)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">2</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Monounsaturated Fat (g)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">2</div>
+          </div>
+          <div class="row margin-bottom"></div>
+          <div class="row">
+            <div class="col-50 text-align-left">Cholesterol (mg)</div>
+            <div class="col-25 text-align-right">300</div>
+            <div class="col-25 text-align-right">300</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Sodium (mg)</div>
+            <div class="col-25 text-align-right">2300</div>
+            <div class="col-25 text-align-right">3000</div>
+          </div>
+          <div class="row margin-bottom"></div>
+          <div class="row">
+            <div class="col-50 text-align-left" style="font-weight: bold;">Total Carbohydrate (g)</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">350</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">412</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Dietary Fiber (g)</div>
+            <div class="col-25 text-align-right">20</div>
+            <div class="col-25 text-align-right">17</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Soluble Fiber (g)</div>
+            <div class="col-25 text-align-right">10</div>
+            <div class="col-25 text-align-right">8</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Total Sugars (g)</div>
+            <div class="col-25 text-align-right">100</div>
+            <div class="col-25 text-align-right">50</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Added Sugars (g)</div>
+            <div class="col-25 text-align-right">70</div>
+            <div class="col-25 text-align-right">50</div>
+          </div>
+          <div class="row margin-bottom"></div>
+          <div class="row">
+            <div class="col-50 text-align-left" style="font-weight: bold;">Protein (g)</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">150</div>
+            <div class="col-25 text-align-right" style="font-weight: bold;">167</div>
+          </div>
+          <div class="row margin-bottom"></div>
+          <div class="row">
+            <div class="col-50 text-align-left">Vitamin D (mcg)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">---</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Calcium (mg)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">---</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Iron (mg)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">---</div>
+          </div>
+          <div class="row">
+            <div class="col-50 text-align-left">Potassium (mg)</div>
+            <div class="col-25 text-align-right">---</div>
+            <div class="col-25 text-align-right">---</div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>
+
+<script>
+  export default (props, { $, $on, $f7 }) => {
+    const dateSelected = props.dateSelected;
+    console.log(dateSelected);
+
+    $on('pageInit', () => {
+      // TODO: fetch nutrition records for dateSelected
+      // TODO: populate page-content with stats
+
+      // load event functions
+
+    });
+
+    return $render;
+  }
+</script>

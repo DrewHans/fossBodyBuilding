@@ -2,6 +2,7 @@ import AboutPage from "../pages/about/index.f7";
 
 import HomePage from "../pages/home/index.f7";
 
+import NutritionStatsPage from "../pages/home/nutrition-stats.f7";
 import TrackFoodItemsPage from "../pages/home/track-food-items.f7";
 import TrackBodyPartSizesPage from "../pages/home/track-body-part-sizes.f7";
 import TrackBodyWeightPage from "../pages/home/track-body-weight.f7";
@@ -98,6 +99,11 @@ var routes = [
   },
 
   {
+    path: "/nutrition-stats/:dateSelected",
+    component: NutritionStatsPage,
+  },
+
+  {
     path: "/settings/",
     component: SettingsIndexPage,
   },
@@ -131,7 +137,7 @@ var routes = [
     path: "/settings/nutrition-intake-targets/",
     component: SettingsNutritionIntakeTargetsPage,
   },
-  
+
   {
     path: "/settings/preferred-units/",
     component: SettingsPreferredUnitsPage,
