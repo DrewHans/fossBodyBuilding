@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="user-details">
+  <div class="page" data-name="nutriment-goals">
 
     <div class="navbar">
       <div class="navbar-bg"></div>
@@ -10,14 +10,14 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title">Set User Details</div>
+        <div class="title">Set Nutriment Intake Goals</div>
       </div>
     </div>
 
     <div class="page-content">
 
       <div class="block">
-        <p><b>User details page!</b></p>
+        <p><b>Set Nutriment Intake Goals page!</b></p>
       </div>
     </div>
 

@@ -27,9 +27,10 @@ import SettingsAppearancePage from "../pages/settings/appearance.f7";
 import SettingsDataExportPage from "../pages/settings/data-export.f7";
 import SettingsDataImportPage from "../pages/settings/data-import.f7";
 import SettingsLanguagePage from "../pages/settings/language.f7";
-import SettingsNutrimentsPage from "../pages/settings/nutriments.f7"
-import SettingsNutritionIntakeTargetsPage from "../pages/settings/nutrition-intake-targets.f7"
+import SettingsCustomNutrimentsPage from "../pages/settings/custom-nutriments.f7"
+import SettingsNutrimentIntakeTargetsPage from "../pages/settings/nutriment-intake-targets.f7"
 import SettingsPreferredUnitsPage from "../pages/settings/preferred-units.f7";
+import SettingsResetAllSettingsPage from "../pages/settings/reset-all-settings.f7";
 
 import StatisticsPage from "../pages/statistics/index.f7";
 
@@ -130,18 +131,23 @@ var routes = [
   },
 
   {
-    path: "/settings/nutriments/",
-    component: SettingsNutrimentsPage,
+    path: "/settings/custom-nutriments/",
+    component: SettingsCustomNutrimentsPage,
   },
 
   {
-    path: "/settings/nutrition-intake-targets/",
-    component: SettingsNutritionIntakeTargetsPage,
+    path: "/settings/nutriment-intake-targets/",
+    component: SettingsNutrimentIntakeTargetsPage,
   },
 
   {
     path: "/settings/preferred-units/",
     component: SettingsPreferredUnitsPage,
+  },
+
+  {
+    path: "/settings/reset-all-settings/",
+    component: SettingsResetAllSettingsPage,
   },
 
   {

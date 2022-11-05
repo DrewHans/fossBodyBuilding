@@ -20,12 +20,13 @@
         <ul>
           <li><a href="/settings/appearance/">Appearance</a></li>
           <li><a href="/settings/language/">Language</a></li>
-          <li><a href="/settings/nutriments/">Nutriments</a></li>
-          <li><a href="/settings/nutrition-intake-targets/">Nutrition Intake Targets</a></li>
+          <li><a href="/settings/nutriment-intake-targets/">Nutriment Intake Targets</a></li>
+          <li><a href="/settings/custom-nutriments/">Custom Nutriments</a></li>
           <li><a href="/settings/preferred-units/">Preferred Units</a></li>
+          <li><a href="/settings/reset-all-settings/">Reset All Settings</a></li>
           <li class="item-divider"></li>
           <li><a href="/settings/data-import/">Import Data</a></li>
-          <li><a href="/settings/data=export/">Export Data</a></li>
+          <li><a href="/settings/data-export/">Export Data</a></li>
         </ul>
       </div>
 

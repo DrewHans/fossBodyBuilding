@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="user-details">
+  <div class="page" data-name="custom-nutriments">
 
     <div class="navbar">
       <div class="navbar-bg"></div>
@@ -10,14 +10,14 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title">Set User Details</div>
+        <div class="title">Custom Nutriments</div>
       </div>
     </div>
 
     <div class="page-content">
 
       <div class="block">
-        <p><b>User details page!</b></p>
+        <p><b>Custom nutriment settings page!</b></p>
       </div>
     </div>
 
