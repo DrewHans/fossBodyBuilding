@@ -10,31 +10,662 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title">Measurement Units Settings</div>
+        <div class="title">Set Preferred Units</div>
       </div>
     </div>
 
     <div class="page-content">
-      <div class="block block-strong">
-        <p>
-          Settings options go here.
-          Name
-          Gender: male, female, nonbinary
-          DOB
-          Height
-          Height Unit
-          Amputation Left
-          Amputation Right
-          Average Activity Level:
-          - Sedentary
-          - Mild
-          - Moderate
-          - High
-          - Extreme
+      <div class="block">
 
-        </p>
+        <!-- Body Tracking Units Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Body Tracking Units</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Body Weight</div>
+                        <div class="item-input-wrap">
+                          <select name="body-weight-unit" id="body-weight-unit-selector">
+                            <option value="lb" selected="selected">Pounds (lb)</option>
+                            <option value="kg">Kilograms (kg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Body Height</div>
+                        <div class="item-input-wrap">
+                          <select name="body-height-unit" id="body-height-unit-selector">
+                            <option value="in" selected="selected">Inches (in)</option>
+                            <option value="cm">Centimeters (cm)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Body Part Size</div>
+                        <div class="item-input-wrap">
+                          <select name="body-part-unit" id="body-part-unit-selector">
+                            <option value="in" selected="selected">Inches (in)</option>
+                            <option value="cm">Centimeters (cm)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Body Tracking Units Accordion -->
+
+        <!-- Body Training Units Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Training Tracking Units</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Exercise Weight</div>
+                        <div class="item-input-wrap">
+                          <select name="exercise-weight-unit" id="exercise-weight-unit-selector">
+                            <option value="lb" selected="selected">Pounds (lb)</option>
+                            <option value="kg">Kilograms (kg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Intensity Units</div>
+                        <div class="item-input-wrap">
+                          <select name="exercise-intensity-unit" id="exercise-intensity-unit-selector">
+                            <option value="rir" selected="selected">REPS In Reserve (RIR) [10-0]</option>
+                            <option value="rpe">Rating of Perceived Exertion (RPE) [0-10]</option>
+                            <option value="percent">Effort Percentage (%) [0%-100%]</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Body Part Size</div>
+                        <div class="item-input-wrap">
+                          <select name="body-part-unit" id="body-part-unit-selector">
+                            <option value="in" selected="selected">Inches (in)</option>
+                            <option value="cm">Centimeters (cm)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Training Tracking Units Accordion -->
+
+        <!-- Nutrition Tracking Units Accordion -->
+        <div class="list">
+          <ul>
+            <li class="accordion-item accordion-item-opened">
+              <a href="#" class="item-content item-link">
+                <div class="item-inner">
+                  <div class="item-title">Nutrition Tracking Units</div>
+                </div>
+              </a>
+              <div class="accordion-item-content">
+
+                <div class="list">
+                  <ul>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">
+                          Food Energy Unit
+                        </div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-energy-unit" id="nutrition-energy-unit-selector">
+                            <option value="kcal" selected="selected">Calories (kcal)</option>
+                            <option value="kJ">Joules (kJ)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-divider">Common Nutrition Fields:</li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Total Fat</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-total-fat-unit" id="nutrition-total-fat-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Saturated Fat</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-saturated-fat-unit" id="nutrition-saturated-fat-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Trans Fat</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-trans-fat-unit" id="nutrition-trans-fat-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Polyunsaturated Fat</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-polyunsaturated-fat-unit"
+                            id="nutrition-polyunsaturated-fat-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Monounsaturated Fat</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-monounsaturated-fat-unit"
+                            id="nutrition-monounsaturated-fat-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Cholesterol</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-cholesterol-unit" id="nutrition-cholesterol-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Sodium</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-sodium-unit" id="nutrition-sodium-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Total Carbohydrate (g)
+                        </div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-total-carbohydrate-unit"
+                            id="nutrition-total-carbohydrate-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Dietary Fiber</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-dietary-fiber-unit" id="nutrition-dietary-fiber-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Soluble Fiber</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-soluble-fiber-unit" id="nutrition-soluble-fiber-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Total Sugar</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-total-sugar-unit" id="nutrition-total-sugar-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Added Sugar</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-added-sugar-unit" id="nutrition-added-sugar-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label" style="font-weight: bold;">Total Protein (g)
+                        </div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-total-protein-unit" id="nutrition-total-protein-unit-selector">
+                            <option value="g" selected="selected">Grams (g)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                    <div class="row margin-bottom"></div>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin D</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vitamin-d-unit" id="nutrition-vitamin-d-unit-selector">
+                            <option value="mcg">Micrograms (mcg)</option>
+                            <option value="iu" selected="selected">International Units (IU)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Calcium</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-calcium-unit" id="nutrition-calcium-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Iron</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-iron-unit" id="nutrition-iron-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Potassium</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-potassium-unit" id="nutrition-potassium-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+
+                    <div class="row margin-bottom"></div>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-divider">Additional Nutrition Fields:</li>
+
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin A</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vitamin-a-unit" id="nutrition-vitamin-a-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin C</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vitamin-c-unit" id="nutrition-vitamin-c-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin E</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vitamin-e-unit" id="nutrition-vitamin-e-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin K</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vitamin-k-unit" id="nutrition-vitamin-k-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Thiamin</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-thiamin-unit" id="nutrition-thiamin-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Riboflavin</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-riboflavin-unit" id="nutrition-riboflavin-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Niacin</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-niacin-unit" id="nutrition-niacin-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin B6</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vitamin-b6-unit" id="nutrition-vitamin-b6-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Folate</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-folate-unit" id="nutrition-folate-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms of Dietary Folate Equivalents (mcg DFE)
+                            </option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Folic Acid</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-folic-acid-unit" id="nutrition-folic-acid-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vitamin B12</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vitamin-b12-unit" id="nutrition-vitamin-b12-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Biotin</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-biotin-unit" id="nutrition-biotin-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Pantothenic Acid</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-pantothenic-acid-unit" id="nutrition-pantothenic-acid-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Phosphorus</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-phosphorus-unit" id="nutrition-phosphorus-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Iodine</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-iodine-unit" id="nutrition-iodine-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Magnesium</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-magnesium-unit" id="nutrition-magnesium-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Zinc</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-zinc-unit" id="nutrition-zinc-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Selenium</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-selenium-unit" id="nutrition-selenium-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Copper</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-copper-unit" id="nutrition-copper-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Manganese</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-manganese-unit" id="nutrition-manganese-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Chromium</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-chromium-unit" id="nutrition-chromium-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Molybdenum</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-molybdenum-unit" id="nutrition-molybdenum-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Chloride</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-chloride-unit" id="nutrition-chloride-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Silicon</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-silicon-unit" id="nutrition-silicon-unit-selector">
+                            <option value="mg" selected="selected">Milligrams (mg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Vanadium</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-vanadium-unit" id="nutrition-vanadium-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Lutein</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-lutein-unit" id="nutrition-lutein-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-floating-label">Lycopene</div>
+                        <div class="item-input-wrap">
+                          <select name="nutrition-lycopene-unit" id="nutrition-lycopene-unit-selector">
+                            <option value="mcg" selected="selected">Micrograms (mcg)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="row margin-bottom"></div>
+
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- End of Nutrition Tracking Units Accordion -->
+
       </div>
+
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+      <div class="row margin-bottom"></div>
+
     </div>
+
   </div>
 </template>
 
