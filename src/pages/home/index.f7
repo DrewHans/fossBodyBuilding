@@ -625,82 +625,11 @@
     var dateSelected;
 
     $on('pageInit', () => {
-
-      // init body weight chart
-      const data = {
-        datasets: [{
-          label: 'Weight',
-          backgroundColor: 'rgba(54, 162, 235, 0.5)',
-          borderColor: 'rgba(54, 162, 235, 0.5)',
-          borderWidth: 4,
-          spanGaps: true,
-          lineTension: 0.25,
-          data: [
-            { x: '10-23', y: 287.0 },
-            { x: '10-25', y: 284.5 },
-            { x: '10-26', y: 285 },
-            { x: '10-28', y: 287 },
-            { x: '10-29', y: 285 },
-            { x: '10-30', y: 283 },
-            { x: '11-01', y: 284 }
-          ]
-        }]
-      };
-
-      const options = {
-        responsive: true,
-        plugins: {
-          tooltip: {
-            mode: 'index',
-            intersect: false
-          },
-          title: {
-            display: false,
-            text: 'Weight Change Over Time'
-          }
-        },
-        hover: {
-          mode: 'index',
-          intersec: false
-        },
-        scales: {
-          x: {
-            ticks: {
-              color: 'rgba(255, 255, 255, 0.5)'
-            },
-            title: {
-              color: 'rgba(255, 255, 255, 0.8)',
-              display: true,
-              text: 'Date ( last 7 weigh-ins )'
-            }
-          },
-          y: {
-            grid: {
-              color: 'rgba(54, 162, 235, 0.2)'
-            },
-            ticks: {
-              color: 'rgba(255, 255, 255, 0.5)',
-              stepSize: 0.5,
-            },
-            title: {
-              color: 'rgba(255, 255, 255, 0.8)',
-              display: true,
-              text: 'Weight ( lb )'
-            }
-          }
-        }
-      };
-
-      const config = {
-        type: 'line',
-        data: data,
-        options: options
-      };
-
-      const myChart = new Chart(
-        document.getElementById('myChart'),
-        config
-      );
+      // create body tab chart
+      const chartElement = document.getElementById('myChart');
+      const chartData = window.services.fetchBodyWeightService.getRecordsForHomeBodyTabChart();
+      const chartConfig = window.utils.getBodyWeightChartConfig(chartData);
+      const myChart = new Chart(chartElement, chartConfig);
 
       const clearRecords = () => {
         // TODO: clear diary

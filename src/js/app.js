@@ -12,7 +12,10 @@ import routes from "./routes.js";
 import store from "./store.js";
 
 import dbAdapter from "./database/db-adapter.js";
+import utils from "./utils/utils.js"
 import userSettings from "./settings/settings.js";
+
+import fetchBodyWeightService from "./services/fetch-body-weight";
 
 // Import main app component
 import App from "../app.f7";
@@ -49,6 +52,9 @@ var app = new Framework7({
         cordovaApp.init(f7);
       }
 
+      // Utils setup
+      window.utils = utils;
+
       // Database setup
       let promiseResult = dbAdapter.initializeDb();
       const onfullfilled = (fullfilledResult) => {
@@ -76,6 +82,10 @@ var app = new Framework7({
           "Device does not support localStorage; user settings will not be saved."
         );
       }
+
+      // load services
+      window.services = {};
+      window.services.fetchBodyWeightService = fetchBodyWeightService;
     },
   },
 });
