@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="nutriment-goals">
+  <div class="page" data-name="nutriment-intake-targets">
 
     <div class="navbar">
       <div class="navbar-bg"></div>

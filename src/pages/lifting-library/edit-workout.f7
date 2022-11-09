@@ -1,5 +1,6 @@
 <template>
-  <div class="page" data-name="about">
+  <div class="page" data-name="edit-workout">
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">

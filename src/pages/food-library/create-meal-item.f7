@@ -1,5 +1,6 @@
 <template>
-  <div class="page" data-name="about">
+  <div class="page" data-name="create-meal-item">
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">
@@ -14,7 +15,9 @@
     </div>
 
     <div class="page-content">
-      <div class="block"><p>Under Construction</p></div>
+      <div class="block">
+        <p>Under Construction</p>
+      </div>
     </div>
   </div>
 </template>

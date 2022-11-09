@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="home">
+  <div class="page" data-name="sandbox">
 
     <div class="navbar">
       <div class="navbar-bg"></div>

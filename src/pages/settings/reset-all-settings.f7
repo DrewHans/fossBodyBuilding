@@ -1,5 +1,5 @@
 <template>
-  <div class="page" data-name="custom-nutriments">
+  <div class="page" data-name="reset-all-settings">
 
     <div class="navbar">
       <div class="navbar-bg"></div>

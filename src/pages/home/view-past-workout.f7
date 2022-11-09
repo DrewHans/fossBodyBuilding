@@ -1,5 +1,6 @@
 <template>
-  <div class="page" data-name="food-library">
+  <div class="page" data-name="view-past-workout">
+
     <div class="navbar">
       <div class="navbar-bg"></div>
       <div class="navbar-inner sliding">

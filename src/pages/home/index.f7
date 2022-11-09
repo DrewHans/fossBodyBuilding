@@ -27,23 +27,11 @@
     <!-- Track Body Weight / Part Size FAB -->
     <!-- needs to be outside of tabs for scroll to work correctly -->
     <!-- is hidden / shown via javascript events -->
-    <div class="fab fab-right-bottom margin-right-half" id="track-body-weight-fab" hidden>
-      <a href="#">
+    <div class="fab fab-right-bottom margin-right-half" id="track-body-fab" hidden>
+      <a href="/track-body/">
         <i class="icon f7-icons if-not-md">plus</i>
-        <i class="icon f7-icons if-not-md">xmark</i>
         <i class="icon material-icons md-only">add</i>
-        <i class="icon material-icons md-only">close</i>
       </a>
-      <div class="fab-buttons fab-buttons-top">
-        <a class="fab-label-button" href="/track-body-weight/">
-          <span><i class="icon material-icons md-only">chevron_right</i></span>
-          <span class="fab-label">Track Body Weight</span>
-        </a>
-        <a class="fab-label-button" href="/track-body-part-sizes/">
-          <span><i class="icon material-icons md-only">chevron_right</i></span>
-          <span class="fab-label">Track Body Part Size</span>
-        </a>
-      </div>
     </div>
 
     <!-- Track Workout FAB -->
@@ -624,7 +612,34 @@
   export default (props, { $, $on, $f7 }) => {
     const fetchBodyWeightService = window.services.fetchBodyWeightService;
     const utils = window.utils;
+
+    var bodyTabChart;
     var dateSelected;
+
+    $on('pageReinit', () => {
+      console.log("pageReinit function called");
+
+      // pageReinit happens after pressing 'link-back' on another page
+      const refreshBodyTabChart = () => {
+        bodyTabChart.destroy(); // chartjs requires this
+        const chartElement = document.getElementById('myChart');
+        const chartData = fetchBodyWeightService.getRecordsForHomeBodyTabChart();
+        const chartConfig = utils.getBodyWeightChartConfig(chartData);
+        bodyTabChart = new Chart(chartElement, chartConfig);
+      };
+
+      const reloadBodyData = () => {
+        refreshBodyTabChart();
+      };
+
+      const reloadNutritionData = () => { };
+
+      const reloadTrainingData = () => { };
+
+      reloadBodyData();
+      reloadNutritionData();
+      reloadTrainingData();
+    });
 
     $on('pageInit', () => {
       // helper functions
@@ -633,7 +648,7 @@
         const chartElement = document.getElementById('myChart');
         const chartData = fetchBodyWeightService.getRecordsForHomeBodyTabChart();
         const chartConfig = utils.getBodyWeightChartConfig(chartData);
-        const myChart = new Chart(chartElement, chartConfig);
+        bodyTabChart = new Chart(chartElement, chartConfig);
       };
 
       const initNutritionTabDatePicker = () => {
@@ -703,13 +718,13 @@
 
       $('#body-tab').on('tab:show', async () => {
         setTimeout(() => {
-          const fabElement = document.getElementById("track-body-weight-fab")
+          const fabElement = document.getElementById("track-body-fab")
           fabElement.hidden = false;
         }, 300)
       });
 
       $('#body-tab').on('tab:hide', async () => {
-        const fabElement = document.getElementById("track-body-weight-fab")
+        const fabElement = document.getElementById("track-body-fab")
         fabElement.hidden = true;
       });
 
