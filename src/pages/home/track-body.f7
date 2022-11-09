@@ -10,7 +10,7 @@
             <span class="if-not-md">Back</span>
           </a>
         </div>
-        <div class="title">Track Weight</div>
+        <div class="title">Track Body Changes</div>
       </div>
     </div>
 
@@ -23,10 +23,181 @@
     </div>
 
     <div class="page-content">
-
-
       <div class="block">
-        <p><b>Track Body Weight</b></p>
+
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                Track Body Weight (input required)
+              </div>
+              <div class="card-content card-content-padding">
+                <div class="list inline-labels no-hairlines-md">
+                  <ul>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;">Body Weight (lb)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-weight-input" placeholder="284.00" value="284.00"
+                            style="font-size: 2em" required validate />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;">Date</div>
+                        <div class="item-input-wrap">
+                          <input type="datetime-local" id="record-date-input" required validate />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row margin-bottom"></div>
+              <div class="row margin-bottom"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row margin-bottom"></div>
+        <div class="row margin-bottom"></div>
+
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-header">
+                Track Body Part Circumference Size (input optional)
+              </div>
+              <div class="card-content card-content-padding">
+                <div class="list inline-labels no-hairlines-md">
+                  <ul>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;">Neck (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-neck-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;">Chest (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-chest-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Left Biceps (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-leftbiceps-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Right Biceps (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-rightbiceps-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Left Forearm (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-leftforearm-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Right Forearm (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-rightforearm-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Waist (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-waist-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Hips (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-hips-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Left Thigh (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-leftthigh-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Right Thigh (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-rightthigh-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <div class="row margin-bottom"></div>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Left Calf (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-leftcalf-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="item-content item-input item-input-outline">
+                      <div class="item-inner">
+                        <div class="item-title item-label" style="font-weight: bold;"> Right Thigh (cm)</div>
+                        <div class="item-input-wrap">
+                          <input type="number" id="record-body-size-rightcalf-input" placeholder="10.00" />
+                          <span class="input-clear-button"></span>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="row margin-bottom"></div>
+              <div class="row margin-bottom"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
@@ -37,16 +208,24 @@
   export default (props, { $, $on, $f7 }) => {
 
     $on('pageInit', () => {
+      // helper functions
+      const setDateInput = () => {
+        const dateToday = new Date();
+        dateToday.setMinutes(dateToday.getMinutes() - dateToday.getTimezoneOffset());
+        dateToday.setMilliseconds(null);
+        dateToday.setSeconds(null);
+        document.getElementById('record-date-input').value = dateToday.toISOString().slice(0, -1);
+      };
+
       // load event functions
-
       $('#submit-weight').on('click', async () => {
-        console.log("Submit weight FAB was pressed");
-
         // trigger click event on link-back to return
         document.getElementById("link-back").click();
-        console.log("link back was clicked");
       });
 
+      // page logic
+
+      setDateInput();
     });
 
     return $render;
