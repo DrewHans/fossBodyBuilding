@@ -622,75 +622,83 @@
 
 <script>
   export default (props, { $, $on, $f7 }) => {
+    const fetchBodyWeightService = window.services.fetchBodyWeightService;
+    const utils = window.utils;
     var dateSelected;
 
     $on('pageInit', () => {
-      // create body tab chart
-      const chartElement = document.getElementById('myChart');
-      const chartData = window.services.fetchBodyWeightService.getRecordsForHomeBodyTabChart();
-      const chartConfig = window.utils.getBodyWeightChartConfig(chartData);
-      const myChart = new Chart(chartElement, chartConfig);
+      // helper functions
 
-      const clearRecords = () => {
-        // TODO: clear diary
+      const initBodyTabChart = () => {
+        const chartElement = document.getElementById('myChart');
+        const chartData = fetchBodyWeightService.getRecordsForHomeBodyTabChart();
+        const chartConfig = utils.getBodyWeightChartConfig(chartData);
+        const myChart = new Chart(chartElement, chartConfig);
       };
 
-      const loadRecords = (diaryDate) => {
-        // load all records with date diaryDate
+      const initNutritionTabDatePicker = () => {
+        return $f7.calendar.create({
+          inputEl: '#date-displayed',
+          closeOnSelect: true,
+          on: {
+            closed: (calenderObject) => {
+              let calendarValue = calenderObject.value;
+              if (calendarValue === null || calendarValue === undefined) {
+                calendarValue = new Date();
+              }
+              const selectedCalendarDate = new Date(calendarValue)
+              dateSelected = selectedCalendarDate;
+              updateNutritionTabDateDisplayed();
+              loadNutritionData();
+            }
+          }
+        });
       };
 
-      const updateDateDisplayed = (newDate) => {
+      const loadBodyWeightData = () => {
+        // clear cards
+        // fetch latest records
+        // calculate stats
+        // insert the stats into the appropriate card
+      };
+
+      const loadNutritionData = () => {
+        // clear all previous records
+        // fetch nutrition records with dateSelected day
+        // insert the record data into the appropriate blocks
+        // calculate daily nutrition stats
+        // update the displayed nutrition stats toolbar
+      };
+
+      const loadTrainingData = () => {
+        // clear all previous records
+        // fetch training records within the last four weeks
+        // insert the record data into the page
+      };
+
+      const updateNutritionTabDateDisplayed = () => {
         const dateDiv = document.getElementById("date-displayed");
-        dateDiv.innerHTML = newDate.toDateString();
-        dateSelected = newDate;
-
+        dateDiv.innerHTML = dateSelected.toDateString();
         const nutritionStatAnchor = document.getElementById("nutrition-stat-anchor");
         nutritionStatAnchor.href = `/nutrition-stats/${dateSelected.toDateString()}`;
       };
-
-      const updateNutritionStats = () => { };
-
-      const dateToday = new Date();
-      dateSelected = dateToday;
-
-      document.getElementById("date-displayed").innerHTML = dateToday.toDateString();
-
-      const nutritionStatAnchor = document.getElementById("nutrition-stat-anchor");
-      nutritionStatAnchor.href = `/nutrition-stats/${dateSelected.toDateString()}`;
-
-      const datePicker = $f7.calendar.create({
-        inputEl: '#date-displayed',
-        closeOnSelect: true,
-        on: {
-          closed: (calenderObject) => {
-            let calendarValue = calenderObject.value;
-            if (calendarValue === null || calendarValue === undefined) {
-              calendarValue = new Date();
-            }
-            const selectedCalendarDate = new Date(calendarValue)
-            updateDateDisplayed(selectedCalendarDate);
-            clearRecords();
-            loadRecords(selectedCalendarDate);
-          }
-        }
-      });
 
       // load event functions
 
       $('#load-previous-day').on('click', async () => {
         var previousDate = new Date(dateSelected);
         previousDate.setDate(previousDate.getDate() - 1);
-        updateDateDisplayed(previousDate);
-        clearRecords();
-        loadRecords(previousDate);
+        dateSelected = previousDate;
+        updateNutritionTabDateDisplayed();
+        loadNutritionData();
       });
 
       $('#load-next-day').on('click', async () => {
         var nextDate = new Date(dateSelected);
         nextDate.setDate(nextDate.getDate() + 1);
-        updateDateDisplayed(nextDate);
-        clearRecords();
-        loadRecords(nextDate);
+        dateSelected = nextDate;
+        updateNutritionTabDateDisplayed();
+        loadNutritionData();
       });
 
       $('#body-tab').on('tab:show', async () => {
@@ -717,6 +725,16 @@
         fabElement.hidden = true;
       });
 
+      // page logic
+      initBodyTabChart();
+
+      const dateToday = new Date();
+      dateSelected = dateToday;
+      updateNutritionTabDateDisplayed();
+
+      const datePicker = initNutritionTabDatePicker();
+
+      loadNutritionData();
     });
 
     return $render;
